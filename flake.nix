@@ -35,16 +35,11 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      darwin,
-      home-manager,
-      homebrew,
-      homebrew-bundle,
-      homebrew-core,
-      homebrew-cask,
-      ...
+    { nixpkgs
+    , darwin
+    , home-manager
+    , homebrew
+    , ...
     }@inputs:
     {
       # Provide nixpkgs-fmt for both Linux and Darwin
@@ -103,13 +98,14 @@
             hostName = "nixos-lab";
           };
           modules = [
-            ./modules/nixos
-            ./hosts/nixosLab/configuration.nix
-            ./modules/home
             home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
+            ./modules/nixos
+            ./hosts/nixosLab/configuration.nix
+            ./modules/home
             ./hosts/nixosLab/home.nix
           ];
         };
@@ -122,13 +118,14 @@
             hostName = "nixos-lab-mini";
           };
           modules = [
-            ./modules/nixos
-            ./hosts/nixosLab-mini/configuration.nix
-            ./modules/home
             home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
+            ./modules/nixos
+            ./hosts/nixosLab-mini/configuration.nix
+            ./modules/home
             ./hosts/nixosLab/home.nix
           ];
         };
@@ -140,14 +137,14 @@
             username = "tomasz";
           };
           modules = [
-            ./modules/nixos
-            ./hosts/nixosDesktop/configuration.nix
-            inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
-            ./modules/home
+            inputs.stylix.nixosModules.stylix
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
+            ./modules/nixos
+            ./hosts/nixosDesktop/configuration.nix
+            ./modules/home
             ./hosts/nixosDesktop/home.nix
           ];
         };

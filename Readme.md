@@ -1,5 +1,25 @@
 #  Nix Configuration Files
 
+## Check Flake 
+
+Validate if everything is fine
+```bash
+nix flake check --all-systems
+```
+
+## Install 
+
+### Macbooks
+Work: 
+```bash
+darwin-rebuild switch --flake .#work
+```
+
+Private 
+```bash
+darwin-rebuild switch --flake .#private
+```
+
 ## Installing nix on Macos
 
 <https://nixos.org/download/>
