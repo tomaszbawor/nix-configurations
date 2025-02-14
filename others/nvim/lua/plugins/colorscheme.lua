@@ -1,11 +1,11 @@
 return {
 
-  { "helbing/aura.nvim" },
+  { "navarasu/onedark.nvim" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "aura",
+      colorscheme = "onedark",
     },
   },
 }
