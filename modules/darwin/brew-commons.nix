@@ -20,6 +20,7 @@ in
         "bruno"
         "obsidian"
         "docker"
+        "rectangle-pro"
       ];
       brews = [
         "ffmpeg"
