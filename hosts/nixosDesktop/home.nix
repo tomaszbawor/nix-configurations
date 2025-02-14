@@ -6,7 +6,7 @@
   features.home = {
     cli.enable = true;
     lazyvim.enable = true;
-    lazyvim.nvimPath = "/home/tomasz/SOCS/nixos-config/others/nvim";
+    lazyvim.nvimPath = "/home/tomasz/nix-configurations/others/nvim";
     ides.enable = true;
     gui-apps.enable = true;
     ghostty.enable = true;

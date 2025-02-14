@@ -1,4 +1,5 @@
-{ config, pkgs, username, ... }: {
+{ pkgs, username, ... }:
+{
 
   features.darwin = {
     commonBrew.enable = true;
@@ -25,7 +26,11 @@
     # End Nix
   '';
 
-  environment.shells = [ pkgs.fish pkgs.zsh pkgs.bashInteractive ];
+  environment.shells = [
+    pkgs.fish
+    pkgs.zsh
+    pkgs.bashInteractive
+  ];
 
   environment.variables = {
     NIX_SSL_CERT_FILE = "/etc/nix/ca_cert.pem";

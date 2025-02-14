@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  username,
-  ...
+{ config
+, lib
+, username
+, ...
 }:
 with lib;
 let
@@ -26,12 +25,11 @@ in
 
     home-manager = {
       users.${username} =
-        {
-          inputs,
-          pkgs,
-          config,
-          lib,
-          ...
+        { inputs
+        , pkgs
+        , config
+        , lib
+        , ...
         }:
         {
 
@@ -56,6 +54,7 @@ in
           };
 
           programs.go.enable = true;
+          programs.poetry.enable = true;
         };
     };
   };

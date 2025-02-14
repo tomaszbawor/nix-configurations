@@ -1,11 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   features = {
     synology-drive.enable = true;
@@ -16,7 +15,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelParams = [ "cgroup_enable=memory" "cgroup_enable=cpuset" "cgroup_memory=1" ];
+  boot.kernelParams = [
+    "cgroup_enable=memory"
+    "cgroup_enable=cpuset"
+    "cgroup_memory=1"
+  ];
 
   networking.hostName = "nixos-lab"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -97,12 +100,12 @@
     enable = true;
     role = "server";
     token = "Secret123";
-    extraFlags = toString ([
+    extraFlags = toString [
       "--write-kubeconfig-mode \"0644\""
       "--disable servicelb"
       "--disable traefik"
       "--disable local-storage"
-    ]);
+    ];
     clusterInit = true;
   };
 

@@ -1,7 +1,8 @@
 { pkgs
 , username
 , ...
-}: {
+}:
+{
 
   features.home = {
     cli.enable = true;
@@ -15,16 +16,19 @@
 
   home-manager = {
 
-    users.${username} = { pkgs, config, lib, ... }: {
-      programs.git = {
-        enable = true;
-        userName = "Tomasz Bawor";
+    users.${username} =
+      { pkgs
+      , config
+      , lib
+      , ...
+      }:
+      {
+        programs.git = {
+          enable = true;
+          userName = "Tomasz Bawor";
+        };
+
       };
-
-      programs.go.enable = true;
-
-      programs.poetry.enable = true;
-    };
   };
 
 }
