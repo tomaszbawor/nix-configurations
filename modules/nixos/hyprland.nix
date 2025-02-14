@@ -37,10 +37,7 @@ in
 
     home-manager = {
       users.${username} =
-        { inputs
-        , pkgs
-        , config
-        , lib
+        { pkgs
         , ...
         }:
         {
@@ -53,6 +50,8 @@ in
             ./hyprland-modules/rofi/rofi.nix
             ./hyprland-modules/rofi/config-emoji.nix
             ./hyprland-modules/rofi/config-long.nix
+
+            ./hyprland-modules/scripts
           ];
 
           home.packages = with pkgs; [
@@ -61,31 +60,8 @@ in
             xdg-desktop-portal-gtk
             xdg-desktop-portal-hyprland
             material-symbols
-
-            # Scripts
-            (import ./hyprland-modules/scripts/emopicker9000.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/task-waybar.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/squirtle.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/nvidia-offload.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/wallsetter.nix {
-              inherit pkgs;
-              inherit username;
-            })
-            (import ./hyprland-modules/scripts/web-search.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/rofi-launcher.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/screenshootin.nix { inherit pkgs; })
-            (import ./hyprland-modules/scripts/list-hypr-bindings.nix { inherit pkgs; })
           ];
 
-          home.file."Pictures/Wallpapers" = {
-            source = ../../others/wallpapers;
-            recursive = true;
-          };
-
-          stylix.targets.waybar.enable = false;
-          stylix.targets.rofi.enable = false;
-          stylix.targets.hyprland.enable = false;
-          stylix.targets.nixvim.enable = false;
           gtk = {
             iconTheme = {
               name = "Papirus-Dark";
@@ -112,9 +88,6 @@ in
             fill_shape=false
           '';
 
-          home.sessionVariables = {
-            EDITOR = "nvim";
-          };
         };
     };
   };

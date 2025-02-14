@@ -1,4 +1,5 @@
 { pkgs
+, username
 , ...
 }:
 {
@@ -72,7 +73,6 @@
     ydotool
     duf
     ncdu
-    wl-clipboard
     pciutils
     ffmpeg
     socat
@@ -104,7 +104,6 @@
     imv
     mpv
     gimp
-    pavucontrol
     tree
     spotify
     neovide
@@ -121,11 +120,6 @@
     ];
   };
 
-  environment.variables = {
-    ZANEYOS_VERSION = "2.3";
-    ZANEYOS = "true";
-  };
-
   # Extra Portal Configuration
   xdg.portal = {
     enable = true;
@@ -139,6 +133,24 @@
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal
     ];
+  };
+
+  home-manager = {
+    users.${username} =
+      { ...
+      }:
+      {
+
+        stylix.targets.waybar.enable = false;
+        stylix.targets.rofi.enable = false;
+        stylix.targets.hyprland.enable = false;
+        stylix.targets.nixvim.enable = false;
+
+        home.file."Pictures/Wallpapers" = {
+          source = ../../others/wallpapers;
+          recursive = true;
+        };
+      };
   };
 
 }
