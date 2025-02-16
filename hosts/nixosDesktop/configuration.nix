@@ -72,6 +72,7 @@
     fluxcd
     argocd
     argocd-autopilot
+    kustomize
     kubectl
     kubectx
     k9s
