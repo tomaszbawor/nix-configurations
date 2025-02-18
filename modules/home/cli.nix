@@ -14,17 +14,13 @@ in
   config = mkIf cfg.enable {
     home-manager = {
       users.${username} =
-        { inputs
-        , pkgs
-        , config
-        , lib
+        { pkgs
         , ...
         }:
         {
 
           home.packages = with pkgs; [
             neovim
-            bat
           ];
 
           programs.fish = {
@@ -56,7 +52,9 @@ in
             };
           };
 
-          # Helper programs used in my ZSH Setup
+          programs.bat.enable = true;
+          programs.btop.enable = true;
+
           programs.zoxide = {
             enable = true;
             enableFishIntegration = true;
