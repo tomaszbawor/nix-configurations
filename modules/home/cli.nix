@@ -1,7 +1,8 @@
-{ config
-, lib
-, username
-, ...
+{
+  config,
+  lib,
+  username,
+  ...
 }:
 with lib;
 let
@@ -14,13 +15,15 @@ in
   config = mkIf cfg.enable {
     home-manager = {
       users.${username} =
-        { pkgs
-        , ...
+        {
+          pkgs,
+          ...
         }:
         {
 
           home.packages = with pkgs; [
             neovim
+            cocogitto # conventional commits helper
           ];
 
           programs.fish = {
@@ -53,7 +56,6 @@ in
           };
 
           programs.bat.enable = true;
-          programs.btop.enable = true;
 
           programs.zoxide = {
             enable = true;
@@ -95,6 +97,8 @@ in
             enable = true;
             enableFishIntegration = true;
           };
+
+          programs.btop.enable = true;
         };
 
     };
