@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  username,
-  ...
+{ config
+, lib
+, username
+, ...
 }:
 with lib;
 let
@@ -15,9 +14,8 @@ in
   config = mkIf cfg.enable {
     home-manager = {
       users.${username} =
-        {
-          pkgs,
-          ...
+        { pkgs
+        , ...
         }:
         {
 

@@ -37,6 +37,11 @@
           htop
           jujutsu
 
+          # Kubernetes
+          kubectl
+          krew
+          wget
+
           # git
           diff-so-fancy
           lazygit
