@@ -1,7 +1,8 @@
-{ config
-, lib
-, username
-, ...
+{
+  config,
+  lib,
+  username,
+  ...
 }:
 with lib;
 let
@@ -13,23 +14,11 @@ in
 
   config = mkIf cfg.enable {
 
-    # Fix for broken LLDB build needed for intellij
-
-    nixpkgs.overlays = [
-      (final: prev: {
-        lldb = prev.lldb.overrideAttrs {
-          dontCheckForBrokenSymlinks = true;
-        };
-      })
-    ];
-
     home-manager = {
       users.${username} =
-        { inputs
-        , pkgs
-        , config
-        , lib
-        , ...
+        {
+          pkgs,
+          ...
         }:
         {
 

@@ -1,7 +1,8 @@
-{ config
-, lib
-, username
-, ...
+{
+  config,
+  lib,
+  username,
+  ...
 }:
 with lib;
 let
@@ -14,8 +15,9 @@ in
   config = mkIf cfg.enable {
     home-manager = {
       users.${username} =
-        { pkgs
-        , ...
+        {
+          pkgs,
+          ...
         }:
         {
 
@@ -43,6 +45,7 @@ in
               # Kubernetes
               k = "kubectl";
               kgp = "kubectl get pods";
+              k8s-get-namespaced = "kubectl api-resources --verbs=list --namespaced -o name  | xargs -n 1 kubectl get --show-kind --ignore-not-found -n";
 
               # Gradle
               gb = "./gradlew build";

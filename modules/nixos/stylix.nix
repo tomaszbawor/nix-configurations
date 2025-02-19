@@ -1,6 +1,7 @@
-{ pkgs
-, username
-, ...
+{
+  pkgs,
+  username,
+  ...
 }:
 {
 
@@ -32,8 +33,8 @@
     cursor.size = 24;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font Mono";
+        package = pkgs.nerd-fonts.iosevka-term-slab;
+        name = "Iosevka";
       };
       sansSerif = {
         package = pkgs.montserrat;
@@ -51,7 +52,7 @@
       };
     };
   };
-
+  # TODO:  Clean this !!!!
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -137,7 +138,8 @@
 
   home-manager = {
     users.${username} =
-      { ...
+      {
+        ...
       }:
       {
 

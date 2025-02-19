@@ -12,7 +12,7 @@
   };
 
   # Kernel version
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
+  boot.kernelPackages = pkgs.linuxPackages_6_13;
 
   environment.variables = {
     NIXPKGS_ALLOW_UNFREE = "1";
