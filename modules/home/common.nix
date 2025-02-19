@@ -2,8 +2,12 @@
 , inputs
 , config
 , lib
+, system
 , ...
 }:
+let
+  kubectl = inputs.krew2nix.packages.${system}.kubectl;
+in
 {
 
   config.lib.meta = {
@@ -38,9 +42,18 @@
           jujutsu
 
           # Kubernetes
-          kubectl
-          krew
+          (kubectl.withKrewPlugins (plugins: [
+            plugins.ns
+            plugins.ctx
+          ]))
+          argocd
+          argocd-autopilot
+          kustomize
+          kubectx
           wget
+          kubernetes-helm
+          fluxcd
+          lens
 
           # git
           diff-so-fancy

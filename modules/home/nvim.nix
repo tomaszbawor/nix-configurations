@@ -1,4 +1,4 @@
-{ config, lib, username, ... }: with lib; let
+{ config, lib, username, pkgs, ... }: with lib; let
   cfg = config.features.home.lazyvim;
   inherit username;
 in
@@ -10,30 +10,33 @@ in
     description = "Absolute path to the nvim configuration directory";
   };
 
-  config = mkIf cfg.enable {
+  config = mkIf cfg.enable
+    {
 
-    home-manager = {
-      users.${username} = { inputs, pkgs, config, lib, ... }: {
+      home-manager = {
+        users.${username} = { inputs, pkgs, config, lib, ... }: {
 
-        home.file = {
-          ".config/nvim" = {
-            source = config.lib.file.mkOutOfStoreSymlink "${cfg.nvimPath}";
-            recursive = true;
+          home.file =
+            {
+              ".config/nvim" = {
+                source = config.lib.file.mkOutOfStoreSymlink "${cfg.nvimPath}";
+                recursive = true;
+              };
+            };
+
+          home.sessionVariables = {
+            EDITOR = "nvim";
           };
+
+          home.packages = with pkgs;[
+            luajitPackages.luarocks_bootstrap
+            lua
+            gcc
+            zig
+            unzip
+          ];
         };
-
-        home.sessionVariables = {
-          EDITOR = "nvim";
-        };
-
-        home.packages = [
-          pkgs.luajitPackages.luarocks_bootstrap
-          pkgs.lua
-        ];
-
       };
     };
-  };
 }
-
 

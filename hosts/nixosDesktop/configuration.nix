@@ -54,7 +54,6 @@
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
-    vim
     wget
 
     # Lazy Vim deps
@@ -66,23 +65,9 @@
     # Terminal
     ghostty
 
-    # kubernetes
-    kubernetes-helm
-    fluxcd
-    argocd
-    argocd-autopilot
-    kustomize
-    kubectl
-    kubectx
-    k9s
-    lens
-
     # secret management
     sops
     age
-    # Gnome
-    gnome-tweaks
-    gnomeExtensions.forge
 
     # Gleam
     erlang

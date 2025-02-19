@@ -13,8 +13,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    krew2nix = {
+      url = "github:eigengrau/krew2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
@@ -51,6 +58,7 @@
           system = "aarch64-darwin";
           specialArgs = {
             inherit inputs;
+            inherit system;
             username = "pl8000224";
           };
 
@@ -71,6 +79,7 @@
           system = "aarch64-darwin";
           specialArgs = {
             inherit inputs;
+            inherit system;
             username = "tomasz";
           };
 
@@ -94,6 +103,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
+            inherit system;
             username = "tbawor";
             hostName = "nixos-lab";
           };
@@ -114,6 +124,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
+            inherit system;
             username = "tbawor";
             hostName = "nixos-lab-mini";
           };
@@ -134,6 +145,7 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
+            inherit system;
             username = "tomasz";
           };
           modules = [
