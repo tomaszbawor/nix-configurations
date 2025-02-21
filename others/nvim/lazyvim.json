@@ -1,6 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.lang.gleam",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.haskell",
@@ -8,10 +10,14 @@
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.kotlin",
+    "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.nix",
+    "lazyvim.plugins.extras.lang.rust",
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.lang.yaml"
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.ui.mini-animate",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "install_version": 8,
   "news": {
