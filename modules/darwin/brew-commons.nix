@@ -5,7 +5,6 @@ in
 {
   options.features.darwin.commonBrew.enable = mkEnableOption "Enable common brew packages";
 
-
   config = mkIf cfg.enable {
 
     homebrew = {
@@ -18,8 +17,8 @@ in
         "ghostty"
         "1password-cli"
         "bruno"
-        "obsidian"
         "docker"
+        "obsidian"
         "rectangle-pro"
       ];
       brews = [

@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  username,
-  ...
+{ config
+, lib
+, username
+, ...
 }:
 with lib;
 let
@@ -16,9 +15,8 @@ in
 
     home-manager = {
       users.${username} =
-        {
-          pkgs,
-          ...
+        { pkgs
+        , ...
         }:
         {
 
