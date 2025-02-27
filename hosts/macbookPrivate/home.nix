@@ -8,7 +8,7 @@
     cli.enable = true;
     lazyvim = {
       enable = true;
-      nvimPath = "/Users/tomasz/nixos-configurations/others/nvim";
+      nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
     };
     ides.enable = true;
     gui-apps.enable = false;
