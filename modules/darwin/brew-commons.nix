@@ -24,6 +24,7 @@ in
       brews = [
         "ffmpeg"
         "imagemagick"
+        "libiconv"
       ];
       onActivation = {
         cleanup = "zap";
