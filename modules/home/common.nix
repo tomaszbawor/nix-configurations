@@ -32,6 +32,8 @@ in
         home.stateVersion = "24.11";
         programs.home-manager.enable = true;
 
+        programs.tmux.enable = true;
+
         xdg.enable = true;
 
         home.packages = with pkgs; [
