@@ -30,6 +30,7 @@ in
             keyMode = "vi";
             shell = "${pkgs.fish}/bin/fish";
             mouse = true;
+            baseIndex = 1;
 
           };
 
