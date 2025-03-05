@@ -1,4 +1,4 @@
-{ config, lib, username, pkgs, ... }: with lib; let
+{ config, lib, username, ... }: with lib; let
   cfg = config.features.home.lazyvim;
   inherit username;
 in

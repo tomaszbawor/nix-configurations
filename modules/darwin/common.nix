@@ -5,7 +5,6 @@
 
   environment.systemPackages = [
     pkgs.coreutils
-    pkgs.libiconv
   ];
 
   nixpkgs.config = {

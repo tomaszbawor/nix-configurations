@@ -1,6 +1,5 @@
-{ config, lib, username, ... }: with lib; let
+{ config, lib, ... }: with lib; let
   cfg = config.features.darwin.commonBrew;
-  inherit username;
 in
 {
   options.features.darwin.commonBrew.enable = mkEnableOption "Enable common brew packages";

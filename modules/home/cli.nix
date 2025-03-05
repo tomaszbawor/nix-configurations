@@ -24,6 +24,15 @@ in
             cocogitto # conventional commits helper
           ];
 
+          programs.tmux = {
+            enable = true;
+            clock24 = true;
+            keyMode = "vi";
+            shell = "${pkgs.fish}/bin/fish";
+            mouse = true;
+
+          };
+
           programs.fish = {
             enable = true;
             generateCompletions = true;
@@ -84,10 +93,6 @@ in
           };
 
           programs.k9s.enable = true;
-
-          programs.zellij = {
-            enable = false;
-          };
 
           programs.kubecolor = {
             enable = true;

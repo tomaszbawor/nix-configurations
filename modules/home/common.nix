@@ -32,15 +32,6 @@ in
         home.stateVersion = "24.11";
         programs.home-manager.enable = true;
 
-        programs.tmux = {
-          enable = true;
-          clock24 = true;
-          keyMode = "vi";
-          shell = "${pkgs.fish}/bin/fish";
-          mouse = true;
-
-        };
-
         xdg.enable = true;
 
         home.packages = with pkgs; [
