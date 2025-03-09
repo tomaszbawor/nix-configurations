@@ -1,5 +1,4 @@
-{ pkgs
-, username
+{ username
 , ...
 }:
 {
@@ -11,7 +10,7 @@
       nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
     };
     ides.enable = true;
-    gui-apps.enable = false;
+    gui-apps.enable = true;
   };
 
   home-manager = {

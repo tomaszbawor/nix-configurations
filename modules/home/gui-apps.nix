@@ -10,10 +10,10 @@ in
       users.${username} = { inputs, pkgs, config, lib, ... }: {
 
         home.packages = [
-          pkgs._1password-gui
           pkgs.obsidian
           pkgs.bruno
           pkgs.google-chrome
+          pkgs.brave
         ];
 
       };
