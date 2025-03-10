@@ -2,7 +2,6 @@
 , ...
 }:
 {
-
   features.home = {
     cli.enable = true;
     lazyvim = {
@@ -10,7 +9,7 @@
       nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
     };
     ides.enable = true;
-    gui-apps.enable = true;
+    gui-apps.enable = false;
   };
 
   home-manager = {

@@ -1,11 +1,20 @@
 { pkgs, config, username, inputs, ... }: {
   ids.gids.nixbld = 350;
 
-  # Auto upgrade nix package and the daemon service.
+  environment = {
 
-  environment.systemPackages = [
-    pkgs.coreutils
-  ];
+    systemPackages = [
+      pkgs.coreutils
+      pkgs.libiconv
+    ];
+
+    variables = {
+      LIBRARY_PATH = "${pkgs.libiconv}/lib:$LIBRARY_PATH";
+      LD_LIBRARY_PATH = "${pkgs.libiconv}/lib:$LD_LIBRARY_PATH";
+      CPATH = "${pkgs.libiconv}/include:$CPATH";
+    };
+  };
+
 
   nixpkgs.config = {
     allowUnfree = true;
