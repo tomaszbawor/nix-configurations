@@ -8,7 +8,7 @@
       enable = true;
       nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
     };
-    ides.enable = true;
+    ides.enable = false;
     gui-apps.enable = false;
   };
 
