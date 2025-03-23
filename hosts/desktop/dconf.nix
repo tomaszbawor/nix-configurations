@@ -26,7 +26,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "sharing";
+      last-panel = "power";
       window-state = mkTuple [ 980 640 true ];
     };
 
@@ -56,6 +56,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/map-l.svg";
+      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/map-d.svg";
+      primary-color = "#241f31";
+      secondary-color = "#000000";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -93,8 +97,20 @@ with lib.hm.gvariant;
       application-id = "org.gnome.Geary.desktop";
     };
 
+    "org/gnome/desktop/screensaver" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/map-l.svg";
+      primary-color = "#241f31";
+      secondary-color = "#000000";
+    };
+
     "org/gnome/desktop/search-providers" = {
       sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Nautilus.desktop" ];
+    };
+
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 0;
     };
 
     "org/gnome/epiphany/state" = {
@@ -118,12 +134,17 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = false;
+      night-light-schedule-automatic = false;
+    };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-button-action = "interactive";
     };
 
     "org/gnome/shell" = {
       disabled-extensions = [ ];
       enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "status-icons@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
-      favorite-apps = [ "google-chrome.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
+      favorite-apps = [ "google-chrome.desktop" "com.mitchellh.ghostty.desktop" "idea-ultimate.desktop" "obsidian.desktop" "org.gnome.Nautilus.desktop" ];
       last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "47.2";
     };
