@@ -70,7 +70,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "gnome-power-panel" "org-gnome-console" "google-chrome" "org-gnome-geary" ];
+      application-children = [ "gnome-power-panel" "org-gnome-console" "google-chrome" "org-gnome-geary" "org-gnome-characters" ];
     };
 
     "org/gnome/desktop/notifications/application/gnome-power-panel" = {
