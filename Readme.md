@@ -1,21 +1,25 @@
-#  Nix Configuration Files
+# Nix Configuration Files
 
-## Check Flake 
+## Check Flake
 
 Validate if everything is fine
+
 ```bash
 nix flake check --all-systems
 ```
 
-## Install 
+## Install
 
 ### Macbooks
-Work: 
+
+Work:
+
 ```bash
 darwin-rebuild switch --flake .#work
 ```
 
-Private 
+Private
+
 ```bash
 darwin-rebuild switch --flake .#private
 ```
@@ -116,6 +120,12 @@ afterwards the subsequent updates can be done by running:
 
 ```bash
 darwin-rebuild switch --flake .#work
+```
+
+## Exporting dconf
+
+```bash
+dconf dump / | dconf2nix > dconf.nix
 ```
 
 ## Known Problems

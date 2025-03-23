@@ -10,8 +10,19 @@ with lib.hm.gvariant;
       last-window-size = mkTuple [ 1787 985 ];
     };
 
+    "org/gnome/Extensions" = {
+      window-height = 668;
+      window-width = 1268;
+    };
+
     "org/gnome/Geary" = {
       migrated-config = true;
+    };
+
+    "org/gnome/calendar" = {
+      active-view = "month";
+      window-maximized = true;
+      window-size = mkTuple [ 768 600 ];
     };
 
     "org/gnome/control-center" = {
@@ -91,6 +102,10 @@ with lib.hm.gvariant;
       migrated = true;
     };
 
+    "org/gnome/mutter" = {
+      edge-tiling = false;
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
@@ -102,15 +117,28 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = [ ];
-      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" ];
-      favorite-apps = [ "google-chrome.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
+      disabled-extensions = [ "drive-menu@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" ];
+      favorite-apps = [ "google-chrome.desktop" "com.mitchellh.ghostty.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
       last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "47.2";
     };
 
+    "org/gnome/shell/extensions/pop-shell" = {
+      smart-gaps = true;
+      tile-by-default = true;
+    };
+
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "";
+    };
+
     "org/gnome/shell/world-clocks" = {
-      locations = [ ];
+      locations = [];
+    };
+
+    "org/gnome/tweaks" = {
+      show-extensions-notice = false;
     };
 
   };
