@@ -23,6 +23,8 @@
       }:
       {
 
+        imports = [./dconf.nix];
+
         # Git Configuration
         programs.git = {
           enable = true;

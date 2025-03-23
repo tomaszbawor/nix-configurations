@@ -106,8 +106,8 @@
             }
             ./modules/nixos
             ./hosts/desktop/configuration.nix
-            ./modules/home
             ./hosts/desktop/home.nix
+            ./modules/home
           ];
         };
       };
