@@ -7,7 +7,7 @@ with lib.hm.gvariant;
   dconf.settings = {
     "org/gnome/Console" = {
       last-window-maximised = false;
-      last-window-size = mkTuple [ 1787 985 ];
+      last-window-size = mkTuple [ 2560 1372 ];
     };
 
     "org/gnome/Extensions" = {
@@ -26,8 +26,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "power";
-      window-state = mkTuple [ 980 640 true ];
+      last-panel = "applications";
+      window-state = mkTuple [ 1268 674 false ];
     };
 
     "org/gnome/desktop/app-folders" = {
@@ -97,6 +97,10 @@ with lib.hm.gvariant;
       application-id = "org.gnome.Geary.desktop";
     };
 
+    "org/gnome/desktop/peripherals/touchpad" = {
+      two-finger-scrolling-enabled = true;
+    };
+
     "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
       picture-options = "zoom";
@@ -130,6 +134,10 @@ with lib.hm.gvariant;
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
+    };
+
+    "org/gnome/nautilus/window-state" = {
+      initial-size = mkTuple [ 1268 674 ];
     };
 
     "org/gnome/settings-daemon/plugins/color" = {

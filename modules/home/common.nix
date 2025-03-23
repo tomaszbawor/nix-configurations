@@ -68,6 +68,9 @@ in
           # fonts
           nerd-fonts.jetbrains-mono
           neofetch
+
+          # blog
+          hugo
         ];
       };
   };
