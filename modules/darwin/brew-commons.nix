@@ -24,6 +24,7 @@ in
         "ffmpeg"
         "imagemagick"
         "libiconv"
+        "talosctl"
       ];
       onActivation = {
         cleanup = "zap";
