@@ -101,6 +101,8 @@
     # Gleam
     erlang
     gleam
+
+    talosctl
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
