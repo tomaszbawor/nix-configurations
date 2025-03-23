@@ -37,7 +37,6 @@
           pkgs.gparted
           pkgs.ollama-cuda
           pkgs.spotify
-          #        pkgs.nvtopPackages.nvidia
         ];
 
       };

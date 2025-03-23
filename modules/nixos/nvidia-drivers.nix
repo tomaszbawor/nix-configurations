@@ -1,12 +1,10 @@
 { config
 , lib
-, username
 , ...
 }:
 with lib;
 let
   cfg = config.features.nvidia;
-  inherit username;
 in
 {
   options.features.nvidia.enable = mkEnableOption "Enable nvidia drivers";
