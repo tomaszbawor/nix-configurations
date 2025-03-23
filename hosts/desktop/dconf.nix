@@ -11,7 +11,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Extensions" = {
-      window-height = 668;
+      window-height = 674;
       window-width = 1268;
     };
 
@@ -81,6 +81,10 @@ with lib.hm.gvariant;
       application-id = "google-chrome.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/org-gnome-characters" = {
+      application-id = "org.gnome.Characters.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-console" = {
       application-id = "org.gnome.Console.desktop";
     };
@@ -117,9 +121,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = [ "drive-menu@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" ];
-      favorite-apps = [ "google-chrome.desktop" "com.mitchellh.ghostty.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
+      disabled-extensions = [ ];
+      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "status-icons@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
+      favorite-apps = [ "google-chrome.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
       last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "47.2";
     };
@@ -134,7 +138,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/world-clocks" = {
-      locations = [];
+      locations = [ ];
     };
 
     "org/gnome/tweaks" = {
