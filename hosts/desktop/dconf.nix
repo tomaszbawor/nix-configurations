@@ -14,10 +14,6 @@ with lib.hm.gvariant;
       migrated-config = true;
     };
 
-    "org/gnome/TextEditor" = {
-      style-scheme = "stylix";
-    };
-
     "org/gnome/control-center" = {
       last-panel = "sharing";
       window-state = mkTuple [ 980 640 true ];
@@ -49,8 +45,6 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///nix/store/cl8y86d54y3lqhhg151lvphpasqwykv8-wallpaper1.jpg";
-      picture-uri-dark = "file:///nix/store/cl8y86d54y3lqhhg151lvphpasqwykv8-wallpaper1.jpg";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -61,11 +55,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-size = 24;
-      cursor-theme = "Bibata-Modern-Ice";
-      document-font-name = "Montserrat  11";
-      font-name = "Montserrat 12";
       gtk-theme = "adw-gtk3";
-      monospace-font-name = "Iosevka 12";
     };
 
     "org/gnome/desktop/notifications" = {
@@ -92,10 +82,6 @@ with lib.hm.gvariant;
       sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Nautilus.desktop" ];
     };
 
-    "org/gnome/eog/view" = {
-      background-color = "#2b2b2b";
-    };
-
     "org/gnome/epiphany/state" = {
       is-maximized = false;
       window-size = mkTuple [ 1028 1085 ];
@@ -116,19 +102,15 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = [];
+      disabled-extensions = [ ];
       enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = [ "google-chrome.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Nautilus.desktop" ];
       last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "47.2";
     };
 
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "Stylix";
-    };
-
     "org/gnome/shell/world-clocks" = {
-      locations = [];
+      locations = [ ];
     };
 
   };

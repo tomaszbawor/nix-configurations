@@ -23,7 +23,7 @@
       }:
       {
 
-        imports = [./dconf.nix];
+        imports = [ ./dconf.nix ];
 
         # Git Configuration
         programs.git = {
