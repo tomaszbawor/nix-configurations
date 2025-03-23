@@ -6,7 +6,5 @@
     ./virtualbox.nix
     ./steam.nix
     ./nvidia-drivers.nix
-    ./hyprland.nix
-    ./stylix.nix
   ];
 }
