@@ -117,11 +117,6 @@ with lib.hm.gvariant;
       idle-delay = mkUint32 0;
     };
 
-    "org/gnome/epiphany/state" = {
-      is-maximized = false;
-      window-size = mkTuple [ 1028 1085 ];
-    };
-
     "org/gnome/evolution-data-server" = {
       migrated = true;
     };
@@ -138,6 +133,7 @@ with lib.hm.gvariant;
 
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [ 1268 674 ];
+      initial-size-file-chooser = mkTuple [ 890 550 ];
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -168,6 +164,11 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/world-clocks" = {
       locations = [ ];
+    };
+
+    "org/gnome/software" = {
+      check-timestamp = mkInt64 1742794943;
+      first-run = false;
     };
 
     "org/gnome/tweaks" = {
