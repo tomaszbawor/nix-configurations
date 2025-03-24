@@ -18,6 +18,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
+
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     homebrew-bundle = {
@@ -39,6 +41,7 @@
     , darwin
     , home-manager
     , homebrew
+    , flatpaks
     , ...
     }@inputs:
     {
@@ -101,6 +104,7 @@
           };
           modules = [
             home-manager.nixosModules.home-manager
+            flatpaks.nixosModules.declarative-flatpak
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
