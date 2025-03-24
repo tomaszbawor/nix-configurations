@@ -22,6 +22,7 @@ in
           home.packages = with pkgs; [
             neovim
             cocogitto # conventional commits helper
+            fnm # Node version manager
           ];
 
           programs.tmux = {
@@ -37,6 +38,10 @@ in
           programs.fish = {
             enable = true;
             generateCompletions = true;
+
+            loginShellInit = ''
+              fnm env - -use-on-cd - -shell fish | source
+            '';
             shellAliases = {
               ls = "eza";
               cat = "bat";
@@ -49,6 +54,7 @@ in
               gdc = "git diff --cached";
               glog = "git log --oneline";
               gs = "git status";
+              gadd = "git add .";
 
               # Kubernetes
               k = "kubectl";

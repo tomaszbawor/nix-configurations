@@ -31,10 +31,6 @@ in
 
             # Programming tools
             pkgs.rustup
-
-            # Node Version Manager
-            pkgs.nodejs_20
-            pkgs.nodenv
           ];
 
           programs.java = {
