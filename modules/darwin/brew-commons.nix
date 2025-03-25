@@ -19,6 +19,7 @@ in
         "docker"
         "obsidian"
         "rectangle-pro"
+        "karabiner-elements"
       ];
       brews = [
         "ffmpeg"
