@@ -1,8 +1,9 @@
-{ config, lib, ... }: with lib; let
-  cfg = config.features.darwin.commonBrew;
-in
-{
-  options.features.darwin.commonBrew.enable = mkEnableOption "Enable common brew packages";
+{ config, lib, ... }:
+with lib;
+let cfg = config.features.darwin.commonBrew;
+in {
+  options.features.darwin.commonBrew.enable =
+    mkEnableOption "Enable common brew packages";
 
   config = mkIf cfg.enable {
 
@@ -20,12 +21,7 @@ in
         "obsidian"
         "rectangle-pro"
       ];
-      brews = [
-        "ffmpeg"
-        "imagemagick"
-        "libiconv"
-        "talosctl"
-      ];
+      brews = [ "ffmpeg" "imagemagick" "libiconv" "talosctl" ];
       onActivation = {
         cleanup = "zap";
         autoUpdate = true;
@@ -38,11 +34,8 @@ in
       # $ nix shell nixpkgs#mas
       # $ mas search <app name>
       #
-      masApps = {
-        "Delete Apps" = 1033808943;
-      };
+      masApps = { "Delete Apps" = 1033808943; };
     };
-
 
   };
 }

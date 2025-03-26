@@ -1,7 +1,1 @@
-{
-  imports = [
-    ./common.nix
-    ./brew-commons.nix
-    ./brew-work.nix
-  ];
-}
+{ imports = [ ./common.nix ./brew-commons.nix ./brew-work.nix ]; }

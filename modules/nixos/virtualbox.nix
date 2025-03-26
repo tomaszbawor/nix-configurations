@@ -1,8 +1,6 @@
-{ config
-, lib
-, username
-, ...
-}: with lib; let
+{ config, lib, username, ... }:
+with lib;
+let
   cfg = config.features.virtualbox;
   inherit username;
 in
@@ -21,5 +19,4 @@ in
     boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
   };
 }
-
 

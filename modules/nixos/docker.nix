@@ -1,4 +1,6 @@
-{ config, lib, username, ... }: with lib; let
+{ config, lib, username, ... }:
+with lib;
+let
   cfg = config.features.docker;
   inherit username;
 in

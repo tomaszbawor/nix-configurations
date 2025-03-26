@@ -1,5 +1,4 @@
-{ pkgs, username, ... }:
-{
+{ pkgs, username, ... }: {
 
   nix = {
     extraOptions = ''
@@ -7,16 +6,12 @@
     '';
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config = { allowUnfree = true; };
 
   # Kernel version
   boot.kernelPackages = pkgs.linuxPackages_6_13;
 
-  environment.variables = {
-    NIXPKGS_ALLOW_UNFREE = "1";
-  };
+  environment.variables = { NIXPKGS_ALLOW_UNFREE = "1"; };
   # Select internationalisation properties.
   i18n.defaultLocale = "pl_PL.UTF-8";
 
@@ -60,16 +55,10 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "Tomasz Bawor";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
 
-    packages = with pkgs; [
-      fish
-      fd
-    ];
+    packages = with pkgs; [ fish fd ];
   };
 
   system.autoUpgrade = {

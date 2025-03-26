@@ -3,10 +3,7 @@
 
   environment = {
 
-    systemPackages = [
-      pkgs.coreutils
-      pkgs.libiconv
-    ];
+    systemPackages = [ pkgs.coreutils pkgs.libiconv ];
 
     variables = {
       LIBRARY_PATH = "${pkgs.libiconv}/lib:$LIBRARY_PATH";
@@ -15,10 +12,7 @@
     };
   };
 
-
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config = { allowUnfree = true; };
 
   system.activationScripts.applications.text =
     let
@@ -48,7 +42,11 @@
 
     gc = {
       automatic = true;
-      interval = { Weekday = 0; Hour = 2; Minute = 0; };
+      interval = {
+        Weekday = 0;
+        Hour = 2;
+        Minute = 0;
+      };
       options = "--delete-older-than 30d";
     };
 

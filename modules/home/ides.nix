@@ -1,8 +1,4 @@
-{ config
-, lib
-, username
-, ...
-}:
+{ config, lib, username, ... }:
 with lib;
 let
   cfg = config.features.home.ides;
@@ -14,33 +10,29 @@ in
   config = mkIf cfg.enable {
 
     home-manager = {
-      users.${username} =
-        { pkgs
-        , ...
-        }:
-        {
+      users.${username} = { pkgs, ... }: {
 
-          home.packages = [
-            pkgs.vscode
+        home.packages = [
+          pkgs.vscode
 
-            pkgs.jetbrains.idea-ultimate
-            pkgs.jetbrains.webstorm
-            pkgs.jetbrains.rust-rover
+          pkgs.jetbrains.idea-ultimate
+          pkgs.jetbrains.webstorm
+          pkgs.jetbrains.rust-rover
 
-            pkgs.code-cursor
+          pkgs.code-cursor
 
-            # Programming tools
-            pkgs.rustup
-          ];
+          # Programming tools
+          pkgs.rustup
+        ];
 
-          programs.java = {
-            enable = true;
-            package = pkgs.temurin-bin-21;
-          };
-
-          programs.go.enable = true;
-          programs.poetry.enable = true;
+        programs.java = {
+          enable = true;
+          package = pkgs.temurin-bin-21;
         };
+
+        programs.go.enable = true;
+        programs.poetry.enable = true;
+      };
     };
   };
 }

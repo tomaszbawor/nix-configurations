@@ -151,11 +151,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1742998938,
-        "narHash": "sha256-H01lTCc3YQ962lrYhX535JQcAygAqBeHW/kuTuAaLLo=",
+        "lastModified": 1743026862,
+        "narHash": "sha256-zYLVClUgrNmH65IlDt6kFkzq8LDupUBUt5XmhteOpAE=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "41aafd5347c7aac3f79042139a3e94d08ef0ac4c",
+        "rev": "2028c107d805df5d20f5305e1ec1ab5698dec22d",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1743009193,
-        "narHash": "sha256-FffDTqom7yguzjj5ool9z+f8/P3pk3q55Rvh3B9a7DY=",
+        "lastModified": 1743027344,
+        "narHash": "sha256-xNQo+IOyKQrqAzDkdE83v+ZpZMQWe3LLp6AD/1S+uLU=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "508944eb10a60946f247ab9a511a3b28f8df7fb9",
+        "rev": "1c9c6201734283ac28e9ff974c79fd7ea629ff29",
         "type": "github"
       },
       "original": {
@@ -296,6 +296,29 @@
         "type": "github"
       }
     },
+    "plasma-manager": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742765550,
+        "narHash": "sha256-2vVIh2JrL6GAGfgCeY9e6iNKrBjs0Hw3bGQEAbwVs68=",
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "rev": "b70be387276e632fe51232887f9e04e2b6ef8c16",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
@@ -306,7 +329,8 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "krew2nix": "krew2nix",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_5",
+        "plasma-manager": "plasma-manager"
       }
     },
     "systems": {

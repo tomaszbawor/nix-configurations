@@ -1,8 +1,4 @@
-{ pkgs
-, username
-, ...
-}:
-{
+{ username, ... }: {
 
   features.home = {
     cli.enable = true;
@@ -14,32 +10,19 @@
   };
 
   home-manager = {
-    users.${username} =
-      { inputs
-      , pkgs
-      , config
-      , lib
-      , ...
-      }:
-      {
+    users.${username} = { inputs, pkgs, config, lib, ... }: {
 
-        imports = [ ./dconf.nix ];
-
-        # Git Configuration
-        programs.git = {
-          enable = true;
-          userName = "Tomasz Bawor";
-          userEmail = "bawortomasz@gmail.com";
-        };
-
-        # Packages specific to this pc
-        home.packages = [
-          pkgs.gparted
-          pkgs.ollama-cuda
-          pkgs.spotify
-        ];
-
+      # Git Configuration
+      programs.git = {
+        enable = true;
+        userName = "Tomasz Bawor";
+        userEmail = "bawortomasz@gmail.com";
       };
+
+      # Packages specific to this pc
+      home.packages = [ pkgs.gparted pkgs.ollama-cuda pkgs.spotify ];
+
+    };
   };
 
 }

@@ -1,13 +1,7 @@
-{ config
-, lib
-, username
-, ...
-}:
+{ config, lib, username, ... }:
 with lib;
-let
-  cfg = config.features.synology-drive;
-in
-{
+let cfg = config.features.synology-drive;
+in {
   options.features.synology-drive.enable = mkEnableOption "Synology Drive";
 
   config = mkIf cfg.enable {

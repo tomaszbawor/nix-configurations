@@ -40,9 +40,7 @@
       };
     };
 
-    desktopManager = {
-      gnome.enable = true;
-    };
+    desktopManager = { plasma6.enable = true; };
 
     videoDrivers = [ "nvidia" ];
   };
@@ -94,16 +92,15 @@
 
     gnomeExtensions.pop-shell
     dconf2nix
+    xclip
+    nixfmt
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tomasz = {
     isNormalUser = true;
     description = "Tomasz Bawor";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   # Enable automatic login for the user..
@@ -132,7 +129,8 @@
 
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-      "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
+      "flathub-beta" =
+        "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
     };
   };
 

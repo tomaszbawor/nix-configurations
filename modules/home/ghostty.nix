@@ -1,8 +1,4 @@
-{ config
-, lib
-, username
-, ...
-}:
+{ config, lib, username, ... }:
 with lib;
 let
   cfg = config.features.home.ghostty;
@@ -13,19 +9,12 @@ in
 
   config = mkIf cfg.enable {
     home-manager = {
-      users.${username} =
-        { inputs
-        , pkgs
-        , config
-        , lib
-        , ...
-        }:
-        {
-          programs.ghostty = {
-            enable = true;
-            enableFishIntegration = true;
-          };
+      users.${username} = { inputs, pkgs, config, lib, ... }: {
+        programs.ghostty = {
+          enable = true;
+          enableFishIntegration = true;
         };
+      };
     };
   };
 }

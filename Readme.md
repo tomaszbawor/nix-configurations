@@ -122,12 +122,6 @@ afterwards the subsequent updates can be done by running:
 darwin-rebuild switch --flake .#work
 ```
 
-## Exporting dconf
-
-```bash
-dconf dump / | dconf2nix > dconf.nix
-```
-
 ## Known Problems
 
 - <https://github.com/NixOS/nix/issues/8771#issuecomment-1662633816>

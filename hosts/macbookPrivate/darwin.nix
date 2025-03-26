@@ -1,8 +1,6 @@
 { config, pkgs, username, ... }: {
 
-  features.darwin = {
-    commonBrew.enable = true;
-  };
+  features.darwin = { commonBrew.enable = true; };
 
   # zsh is the default shell on Mac and we want to make sure that we're
   # configuring the rc correctly with nix-darwin paths.
@@ -18,9 +16,7 @@
     shell = pkgs.fish;
   };
 
-  fonts.packages = [
-    pkgs.nerd-fonts.jetbrains-mono
-  ];
+  fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 
   system = {
     stateVersion = 4;
@@ -33,9 +29,7 @@
         InitialKeyRepeat = 15;
       };
 
-      finder = {
-        _FXShowPosixPathInTitle = false;
-      };
+      finder = { _FXShowPosixPathInTitle = false; };
     };
 
   };
