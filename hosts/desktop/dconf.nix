@@ -19,6 +19,11 @@ with lib.hm.gvariant;
       migrated-config = true;
     };
 
+    "org/gnome/Totem" = {
+      active-plugins = [ "autoload-subtitles" "recent" "screenshot" "vimeo" "variable-rate" "mpris" "screensaver" "open-directory" "skipto" "save-file" "apple-trailers" "movie-properties" "rotation" ];
+      subtitle-encoding = "WINDOWS-1250";
+    };
+
     "org/gnome/calendar" = {
       active-view = "month";
       window-maximized = true;
@@ -85,6 +90,10 @@ with lib.hm.gvariant;
       application-id = "google-chrome.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/idea-ultimate" = {
+      application-id = "idea-ultimate.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-characters" = {
       application-id = "org.gnome.Characters.desktop";
     };
@@ -117,6 +126,10 @@ with lib.hm.gvariant;
       idle-delay = mkUint32 0;
     };
 
+    "org/gnome/epiphany" = {
+      ask-for-default = false;
+    };
+
     "org/gnome/evolution-data-server" = {
       migrated = true;
     };
@@ -134,6 +147,10 @@ with lib.hm.gvariant;
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [ 1268 674 ];
       initial-size-file-chooser = mkTuple [ 890 550 ];
+    };
+
+    "org/gnome/portal/filechooser/google-chrome" = {
+      last-folder-path = "/home/tomasz/Downloads/Elo";
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -167,8 +184,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1742794943;
+      check-timestamp = mkInt64 1742927126;
       first-run = false;
+      flatpak-purge-timestamp = mkInt64 1742952266;
     };
 
     "org/gnome/tweaks" = {
