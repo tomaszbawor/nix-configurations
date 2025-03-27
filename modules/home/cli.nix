@@ -27,6 +27,8 @@ in
 
         };
 
+        programs.zellij = { enable = true; };
+
         programs.fish = {
           enable = true;
           generateCompletions = true;

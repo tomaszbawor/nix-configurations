@@ -3,6 +3,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,72 +42,82 @@
     };
   };
 
-  outputs = { nixpkgs, darwin, home-manager, homebrew, flatpaks,plasma-manager, ... }@inputs: {
-    # Provide nixpkgs-fmt for both Linux and Darwin
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-    formatter.aarch64-darwin =
-      nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
+  outputs =
+    { nixpkgs
+    , darwin
+    , home-manager
+    , nixos-cosmic
+    , homebrew
+    , flatpaks
+    , plasma-manager
+    , ...
+    }@inputs: {
+      # Provide nixpkgs-fmt for both Linux and Darwin
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      formatter.aarch64-darwin =
+        nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
 
-    darwinConfigurations = {
-      work = darwin.lib.darwinSystem rec {
-        system = "aarch64-darwin";
-        specialArgs = {
-          inherit inputs;
-          inherit system;
-          username = "pl8000224";
+      darwinConfigurations = {
+        work = darwin.lib.darwinSystem rec {
+          system = "aarch64-darwin";
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+            username = "pl8000224";
+          };
+
+          modules = [
+            home-manager.darwinModules.home-manager
+            plasma-manager.homeManagerModules.plasma-manager
+            homebrew.darwinModules.nix-homebrew
+            { home-manager.extraSpecialArgs = specialArgs; }
+            ./modules/darwin
+            ./hosts/macbookWork/darwin.nix
+            ./modules/home
+            ./hosts/macbookWork/home.nix
+          ];
         };
 
-        modules = [
-          home-manager.darwinModules.home-manager
-          plasma-manager.homeManagerModules.plasma-manager
-          homebrew.darwinModules.nix-homebrew
-          { home-manager.extraSpecialArgs = specialArgs; }
-          ./modules/darwin
-          ./hosts/macbookWork/darwin.nix
-          ./modules/home
-          ./hosts/macbookWork/home.nix
-        ];
-      };
+        private = darwin.lib.darwinSystem rec {
+          system = "aarch64-darwin";
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+            username = "tomasz";
+          };
 
-      private = darwin.lib.darwinSystem rec {
-        system = "aarch64-darwin";
-        specialArgs = {
-          inherit inputs;
-          inherit system;
-          username = "tomasz";
+          modules = [
+            home-manager.darwinModules.home-manager
+            homebrew.darwinModules.nix-homebrew
+            { home-manager.extraSpecialArgs = specialArgs; }
+            ./modules/darwin
+            ./hosts/macbookPrivate/darwin.nix
+            ./modules/home
+            ./hosts/macbookPrivate/home.nix
+          ];
         };
 
-        modules = [
-          home-manager.darwinModules.home-manager
-          homebrew.darwinModules.nix-homebrew
-          { home-manager.extraSpecialArgs = specialArgs; }
-          ./modules/darwin
-          ./hosts/macbookPrivate/darwin.nix
-          ./modules/home
-          ./hosts/macbookPrivate/home.nix
-        ];
       };
 
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+            username = "tomasz";
+          };
+          modules = [
+            home-manager.nixosModules.home-manager
+            flatpaks.nixosModules.declarative-flatpak
+            nixos-cosmic.nixosModules.default
+            { home-manager.extraSpecialArgs = specialArgs; }
+            ./modules/nixos
+            ./hosts/desktop/configuration.nix
+            ./hosts/desktop/home.nix
+            ./modules/home
+          ];
+        };
+      };
     };
-
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          inherit system;
-          username = "tomasz";
-        };
-        modules = [
-          home-manager.nixosModules.home-manager
-          flatpaks.nixosModules.declarative-flatpak
-          { home-manager.extraSpecialArgs = specialArgs; }
-          ./modules/nixos
-          ./hosts/desktop/configuration.nix
-          ./hosts/desktop/home.nix
-          ./modules/home
-        ];
-      };
-    };
-  };
 }

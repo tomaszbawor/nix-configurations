@@ -40,10 +40,10 @@
       };
     };
 
-    desktopManager = { plasma6.enable = true; };
-
     videoDrivers = [ "nvidia" ];
   };
+
+  services.desktopManager.cosmic.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -70,6 +70,7 @@
 
   environment.systemPackages = with pkgs; [
     wget
+    pkg-config
 
     # Lazy Vim deps
     gcc
