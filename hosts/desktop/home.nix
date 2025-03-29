@@ -20,7 +20,7 @@
       };
 
       # Packages specific to this pc
-      home.packages = [ pkgs.gparted pkgs.ollama-cuda pkgs.spotify ];
+      home.packages = [ pkgs.gparted pkgs.spotify ];
 
     };
   };
