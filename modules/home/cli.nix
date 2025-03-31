@@ -3,8 +3,7 @@ with lib;
 let
   cfg = config.features.home.cli;
   inherit username;
-in
-{
+in {
   options.features.home.cli.enable = mkEnableOption "Enable cli setup";
 
   config = mkIf cfg.enable {
@@ -25,6 +24,11 @@ in
           mouse = true;
           baseIndex = 1;
 
+        };
+
+        programs.direnv = {
+          nix-direnv.enable = true;
+          enableFishIntegration = true;
         };
 
         programs.zellij = { enable = true; };
