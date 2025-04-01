@@ -9,7 +9,7 @@
   nixpkgs.config = { allowUnfree = true; };
 
   # Kernel version
-  boot.kernelPackages = pkgs.linuxPackages_6_13;
+  boot.kernelPackages = pkgs.linuxPackages_6_14;
 
   environment.variables = { NIXPKGS_ALLOW_UNFREE = "1"; };
   # Select internationalisation properties.
