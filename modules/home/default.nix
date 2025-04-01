@@ -6,5 +6,6 @@
     ./ides.nix
     ./gui-apps.nix
     ./ghostty.nix
+    ./kanata
   ];
 }

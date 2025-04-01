@@ -7,6 +7,7 @@
     ides.enable = true;
     gui-apps.enable = true;
     ghostty.enable = true;
+    kanata-homerow.enable = true;
   };
 
   home-manager = {
