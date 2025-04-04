@@ -43,10 +43,18 @@
     };
   };
 
-  outputs = { nixpkgs, darwin, home-manager, nixos-cosmic, homebrew, flatpaks
-    , plasma-manager, ... }@inputs: {
+  outputs =
+    { nixpkgs
+    , darwin
+    , home-manager
+    , nixos-cosmic
+    , homebrew
+    , flatpaks
+    , plasma-manager
+    , ...
+    }@inputs: {
 
-      formatter.x88_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       formatter.aarch64-darwin =
         nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
 

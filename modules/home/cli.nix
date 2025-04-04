@@ -3,7 +3,8 @@ with lib;
 let
   cfg = config.features.home.cli;
   inherit username;
-in {
+in
+{
   options.features.home.cli.enable = mkEnableOption "Enable cli setup";
 
   config = mkIf cfg.enable {
