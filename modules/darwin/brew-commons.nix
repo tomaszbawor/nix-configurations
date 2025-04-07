@@ -1,7 +1,8 @@
 { config, lib, ... }:
 with lib;
 let cfg = config.features.darwin.commonBrew;
-in {
+in
+{
   options.features.darwin.commonBrew.enable =
     mkEnableOption "Enable common brew packages";
 
@@ -20,6 +21,7 @@ in {
         "docker"
         "obsidian"
         "rectangle-pro"
+        "notion"
       ];
       brews = [ "ffmpeg" "imagemagick" "libiconv" "talosctl" ];
       onActivation = {
