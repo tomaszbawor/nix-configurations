@@ -43,6 +43,11 @@
     videoDrivers = [ "nvidia" ];
   };
 
+  nix.settings = {
+    cores = 8;
+    max-jobs = 2;
+  };
+
   services.desktopManager.cosmic.enable = true;
 
   # Configure keymap in X11
