@@ -1,7 +1,14 @@
-{ config, lib, username, ... }:
+{
+  config,
+  lib,
+  username,
+  ...
+}:
 with lib;
-let cfg = config.features.steam;
-in {
+let
+  cfg = config.features.steam;
+in
+{
   options.features.steam.enable = mkEnableOption "Enable steam";
 
   config = mkIf cfg.enable {

@@ -1,9 +1,19 @@
-{ pkgs, config, username, inputs, ... }: {
+{
+  pkgs,
+  config,
+  username,
+  inputs,
+  ...
+}:
+{
   ids.gids.nixbld = 350;
 
   environment = {
 
-    systemPackages = [ pkgs.coreutils pkgs.libiconv ];
+    systemPackages = [
+      pkgs.coreutils
+      pkgs.libiconv
+    ];
 
     variables = {
       LIBRARY_PATH = "${pkgs.libiconv}/lib:$LIBRARY_PATH";
@@ -12,7 +22,9 @@
     };
   };
 
-  nixpkgs.config = { allowUnfree = true; };
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   system.activationScripts.applications.text =
     let

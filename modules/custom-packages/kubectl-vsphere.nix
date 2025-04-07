@@ -5,7 +5,10 @@ in
 pkgs.stdenv.mkDerivation {
   name = "vsphere-plugin";
 
-  buildInputs = [ pkgs.unzip pkgs.coreutils ];
+  buildInputs = [
+    pkgs.unzip
+    pkgs.coreutils
+  ];
 
   src = builtins.fetchurl {
     url = pluginUrl;

@@ -1,4 +1,9 @@
-{ config, lib, username, ... }:
+{
+  config,
+  lib,
+  username,
+  ...
+}:
 with lib;
 let
   cfg = config.features.virtualbox;
@@ -19,4 +24,3 @@ in
     boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
   };
 }
-

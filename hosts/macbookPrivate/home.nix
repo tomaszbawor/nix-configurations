@@ -1,4 +1,5 @@
-{ username, ... }: {
+{ username, ... }:
+{
   features.home = {
     cli.enable = true;
     lazyvim = {
@@ -11,13 +12,20 @@
 
   home-manager = {
 
-    users.${username} = { pkgs, config, lib, ... }: {
-      programs.git = {
-        enable = true;
-        userName = "Tomasz Bawor";
-      };
+    users.${username} =
+      {
+        pkgs,
+        config,
+        lib,
+        ...
+      }:
+      {
+        programs.git = {
+          enable = true;
+          userName = "Tomasz Bawor";
+        };
 
-    };
+      };
   };
 
 }

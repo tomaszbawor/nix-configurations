@@ -1,4 +1,9 @@
-{ config, lib, username, ... }:
+{
+  config,
+  lib,
+  username,
+  ...
+}:
 with lib;
 let
   cfg = config.features.home.lazyvim;
@@ -15,26 +20,35 @@ in
   config = mkIf cfg.enable {
 
     home-manager = {
-      users.${username} = { inputs, pkgs, config, lib, ... }: {
+      users.${username} =
+        {
+          inputs,
+          pkgs,
+          config,
+          lib,
+          ...
+        }:
+        {
 
-        home.file = {
-          ".config/nvim" = {
-            source = config.lib.file.mkOutOfStoreSymlink "${cfg.nvimPath}";
-            recursive = true;
+          home.file = {
+            ".config/nvim" = {
+              source = config.lib.file.mkOutOfStoreSymlink "${cfg.nvimPath}";
+              recursive = true;
+            };
           };
+
+          home.sessionVariables = {
+            EDITOR = "nvim";
+          };
+
+          home.packages = with pkgs; [
+            luajitPackages.luarocks_bootstrap
+            lua
+            gcc
+            zig
+            unzip
+          ];
         };
-
-        home.sessionVariables = { EDITOR = "nvim"; };
-
-        home.packages = with pkgs; [
-          luajitPackages.luarocks_bootstrap
-          lua
-          gcc
-          zig
-          unzip
-        ];
-      };
     };
   };
 }
-

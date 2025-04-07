@@ -1,6 +1,14 @@
-{ config, pkgs, username, ... }: {
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
+{
 
-  features.darwin = { commonBrew.enable = true; };
+  features.darwin = {
+    commonBrew.enable = true;
+  };
 
   # zsh is the default shell on Mac and we want to make sure that we're
   # configuring the rc correctly with nix-darwin paths.
@@ -8,7 +16,11 @@
 
   programs.fish.enable = true;
 
-  environment.shells = [ pkgs.fish pkgs.zsh pkgs.bashInteractive ];
+  environment.shells = [
+    pkgs.fish
+    pkgs.zsh
+    pkgs.bashInteractive
+  ];
 
   # User Darwin Settings
   users.users.${username} = {
@@ -29,7 +41,9 @@
         InitialKeyRepeat = 15;
       };
 
-      finder = { _FXShowPosixPathInTitle = false; };
+      finder = {
+        _FXShowPosixPathInTitle = false;
+      };
     };
 
   };

@@ -1,4 +1,5 @@
-{ username, ... }: {
+{ username, ... }:
+{
 
   features.home = {
     cli.enable = true;
@@ -11,15 +12,22 @@
 
   home-manager = {
 
-    users.${username} = { pkgs, config, lib, ... }: {
+    users.${username} =
+      {
+        pkgs,
+        config,
+        lib,
+        ...
+      }:
+      {
 
-      imports = [ ./../../modules/home/work-packages.nix ];
+        imports = [ ./../../modules/home/work-packages.nix ];
 
-      programs.git = {
-        enable = true;
-        userName = "Tomasz Bawor";
+        programs.git = {
+          enable = true;
+          userName = "Tomasz Bawor";
+        };
       };
-    };
   };
 
 }

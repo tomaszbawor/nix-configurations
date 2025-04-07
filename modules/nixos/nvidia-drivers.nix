@@ -1,7 +1,9 @@
 { config, lib, ... }:
 with lib;
-let cfg = config.features.nvidia;
-in {
+let
+  cfg = config.features.nvidia;
+in
+{
   options.features.nvidia.enable = mkEnableOption "Enable nvidia drivers";
 
   config = mkIf cfg.enable {

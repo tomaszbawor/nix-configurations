@@ -44,19 +44,20 @@
   };
 
   outputs =
-    { nixpkgs
-    , darwin
-    , home-manager
-    , nixos-cosmic
-    , homebrew
-    , flatpaks
-    , plasma-manager
-    , ...
-    }@inputs: {
+    {
+      nixpkgs,
+      darwin,
+      home-manager,
+      nixos-cosmic,
+      homebrew,
+      flatpaks,
+      plasma-manager,
+      ...
+    }@inputs:
+    {
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-      formatter.aarch64-darwin =
-        nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
 
       darwinConfigurations = {
         work = darwin.lib.darwinSystem rec {

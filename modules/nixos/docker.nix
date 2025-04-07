@@ -1,4 +1,9 @@
-{ config, lib, username, ... }:
+{
+  config,
+  lib,
+  username,
+  ...
+}:
 with lib;
 let
   cfg = config.features.docker;

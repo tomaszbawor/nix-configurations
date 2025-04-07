@@ -1,4 +1,5 @@
-{ pkgs, username, ... }: {
+{ pkgs, username, ... }:
+{
 
   features.darwin = {
     commonBrew.enable = true;
@@ -14,7 +15,11 @@
     fnm env --use-on-cd --shell fish | source
   '';
 
-  environment.shells = [ pkgs.fish pkgs.zsh pkgs.bashInteractive ];
+  environment.shells = [
+    pkgs.fish
+    pkgs.zsh
+    pkgs.bashInteractive
+  ];
 
   environment.variables = {
     NIX_SSL_CERT_FILE = "/etc/nix/ca_cert.pem";
@@ -42,7 +47,9 @@
         InitialKeyRepeat = 15;
       };
 
-      finder = { _FXShowPosixPathInTitle = false; };
+      finder = {
+        _FXShowPosixPathInTitle = false;
+      };
     };
   };
 

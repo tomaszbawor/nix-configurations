@@ -106,7 +106,10 @@
   users.users.tomasz = {
     isNormalUser = true;
     description = "Tomasz Bawor";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   # Enable automatic login for the user..
@@ -135,8 +138,7 @@
 
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-      "flathub-beta" =
-        "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
+      "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
     };
   };
 
