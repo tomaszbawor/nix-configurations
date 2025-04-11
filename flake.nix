@@ -17,12 +17,6 @@
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
     krew2nix.url = "github:eigengrau/krew2nix";
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
 
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
@@ -43,21 +37,13 @@
     };
   };
 
-  outputs =
-    {
-      nixpkgs,
-      darwin,
-      home-manager,
-      nixos-cosmic,
-      homebrew,
-      flatpaks,
-      plasma-manager,
-      ...
-    }@inputs:
-    {
+  outputs = { nixpkgs, darwin, home-manager, nixos-cosmic, homebrew, flatpaks
+    , ... }@inputs: {
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
+      formatter.x86_64-linux =
+        nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.aarch64-darwin =
+        nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
 
       darwinConfigurations = {
         work = darwin.lib.darwinSystem rec {
