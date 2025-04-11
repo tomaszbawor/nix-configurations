@@ -77,6 +77,7 @@ in
 
               # Ultilities
               gites = "git add .; git commit --amend --no-edit; git push -f";
+              runbg = ''bash -c '"$@" > /dev/null 2>&1 & disown' --'';
             };
           };
 

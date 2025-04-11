@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  username,
-  ...
-}:
+{ config, lib, ... }:
 with lib;
 let
   cfg = config.features.steam;

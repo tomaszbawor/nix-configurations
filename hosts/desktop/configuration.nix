@@ -43,6 +43,14 @@
     videoDrivers = [ "nvidia" ];
   };
 
+  # Corne Keyboard
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="4653", ATTR{idProduct}=="0001", MODE="0666"
+  '';
+  services.udev.packages = with pkgs; [
+    via
+    qmk-udev-rules
+  ];
   nix.settings = {
     cores = 8;
     max-jobs = 2;
