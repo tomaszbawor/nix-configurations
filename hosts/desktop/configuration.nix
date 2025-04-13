@@ -107,7 +107,7 @@
     gnomeExtensions.pop-shell
     dconf2nix
     xclip
-    nixfmt
+    nixfmt-rfc-style
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

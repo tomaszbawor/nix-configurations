@@ -47,6 +47,7 @@ in
             gcc
             zig
             unzip
+            python314Full
           ];
         };
     };
