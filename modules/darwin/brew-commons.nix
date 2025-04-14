@@ -24,7 +24,7 @@ in
         "notion"
       ];
       brews = [
-        "ffmpeg"
+        #"ffmpeg"
         "imagemagick"
         "libiconv"
         "talosctl"
@@ -32,6 +32,7 @@ in
       onActivation = {
         cleanup = "zap";
         autoUpdate = true;
+        upgrade = true;
       };
 
       # These app IDs are from using the mas CLI app
