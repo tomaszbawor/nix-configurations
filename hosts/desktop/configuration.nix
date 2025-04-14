@@ -108,6 +108,7 @@
     dconf2nix
     xclip
     nixfmt-rfc-style
+    ollama-cuda
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
