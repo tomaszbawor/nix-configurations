@@ -21,11 +21,10 @@ in
         "docker"
         "obsidian"
         "rectangle-pro"
-        "notion"
       ];
       brews = [
         #"ffmpeg"
-        "imagemagick"
+        #"imagemagick"
         "libiconv"
         "talosctl"
       ];
