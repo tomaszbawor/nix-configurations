@@ -19,7 +19,6 @@ in
         {
 
           home.packages = with pkgs; [
-            neovim
             cocogitto # conventional commits helper
             fnm # Node version manager
           ];
@@ -31,7 +30,6 @@ in
             shell = "${pkgs.fish}/bin/fish";
             mouse = true;
             baseIndex = 1;
-
           };
 
           programs.direnv = {

@@ -42,7 +42,7 @@ in
           };
 
           home.packages = with pkgs; [
-            luajitPackages.luarocks_bootstrap
+            neovim
             lua
             gcc
             zig

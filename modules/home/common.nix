@@ -1,9 +1,10 @@
-{ username
-, inputs
-, config
-, lib
-, system
-, ...
+{
+  username,
+  inputs,
+  config,
+  lib,
+  system,
+  ...
 }:
 let
   kubectl = inputs.krew2nix.packages.${system}.kubectl;
@@ -71,7 +72,6 @@ in
 
           # notes
           zk
-
         ];
       };
   };
