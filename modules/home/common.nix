@@ -39,6 +39,8 @@ in
           ripgrep
           htop
           jujutsu
+          tldr
+          cht-sh
 
           # Kubernetes
           (kubectl.withKrewPlugins (plugins: [
