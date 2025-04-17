@@ -23,10 +23,6 @@ in
             pkgs.vscode
 
             pkgs.jetbrains.idea-ultimate
-            pkgs.jetbrains.webstorm
-            pkgs.jetbrains.rust-rover
-
-            pkgs.code-cursor
 
             # Programming tools
             pkgs.rustup
