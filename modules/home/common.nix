@@ -59,8 +59,6 @@ in
           # git
           diff-so-fancy
           lazygit
-          commitizen
-          pre-commit
 
           # ansible
           ansible
