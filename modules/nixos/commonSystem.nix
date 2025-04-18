@@ -69,12 +69,19 @@
     packages = with pkgs; [
       fish
       fd
+      wireshark
     ];
   };
 
   system.autoUpgrade = {
     enable = true;
     channel = "https://nixos.org/channels/nixos-24.11";
+  };
+
+  programs.wireshark = {
+    enable = true;
+    usbmon.enable = true;
+    dumpcap.enable = true;
   };
 
   programs = {

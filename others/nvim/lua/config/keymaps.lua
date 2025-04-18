@@ -10,3 +10,4 @@ map("n", "<leader>zn", "<cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opt
 map("n", "<leader>zo", "<cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
 map("n", "<leader>zt", "<cmd>ZkTags<CR>", opts)
 map("n", "<leader>zl", "<cmd>ZkLinks<CR>", opts)
+map("i", "jj", "<Esc>", opts)
