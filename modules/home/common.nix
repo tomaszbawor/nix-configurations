@@ -61,7 +61,6 @@ in
           lazygit
 
           # ansible
-          ansible
           sshpass
 
           # fonts
