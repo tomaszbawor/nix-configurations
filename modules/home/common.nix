@@ -71,6 +71,9 @@ in
 
           # notes
           zk
+
+          # others
+          repomix # zipping repo into one file
         ];
       };
   };
