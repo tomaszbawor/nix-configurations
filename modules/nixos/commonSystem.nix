@@ -69,7 +69,6 @@
     packages = with pkgs; [
       fish
       fd
-      wireshark
     ];
   };
 
@@ -82,6 +81,7 @@
     enable = true;
     usbmon.enable = true;
     dumpcap.enable = true;
+    package = pkgs.wireshark;
   };
 
   programs = {
