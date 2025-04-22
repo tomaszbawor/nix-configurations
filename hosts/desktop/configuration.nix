@@ -109,6 +109,9 @@
     xclip
     nixfmt-rfc-style
     ollama-cuda
+
+    arduino
+    arduino-ide
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
