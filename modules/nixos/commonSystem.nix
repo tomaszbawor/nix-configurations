@@ -77,13 +77,6 @@
     channel = "https://nixos.org/channels/nixos-24.11";
   };
 
-  programs.wireshark = {
-    enable = true;
-    usbmon.enable = true;
-    dumpcap.enable = true;
-    package = pkgs.wireshark;
-  };
-
   programs = {
     fish.enable = true;
     nix-ld.enable = true; # Enable nix-ld

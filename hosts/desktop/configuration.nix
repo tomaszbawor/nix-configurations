@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -58,6 +58,14 @@
 
   services.desktopManager.cosmic.enable = true;
 
+  # Wireshark setup
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+    dumpcap.enable = true;
+    usbmon.enable = true;
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
@@ -112,6 +120,7 @@
 
     arduino
     arduino-ide
+
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -121,6 +130,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "wireshark"
     ];
   };
 
