@@ -116,7 +116,7 @@
     dconf2nix
     xclip
     nixfmt-rfc-style
-    ollama
+    ollama-cuda
 
     arduino
     arduino-ide
