@@ -42,6 +42,9 @@ in
           tldr
           cht-sh
 
+          # AI Agent
+          codex
+
           # Kubernetes
           (kubectl.withKrewPlugins (plugins: [
             plugins.ns
