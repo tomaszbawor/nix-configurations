@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    nixos-cosmic.url = "github:PhoenixPhantom/nixos-cosmic";
     krew2nix.url = "github:eigengrau/krew2nix";
 
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
