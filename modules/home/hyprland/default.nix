@@ -1,6 +1,13 @@
 { ... }:
 {
   imports = [
+    ./core
+    ./fastfetch
+    ./rofi
+    ./scripts
+    ./waybar/waybar-curved.nix
+    ./yazi
+    ./wlogout
     ./amfora.nix
     ./bat.nix
     ./btop.nix
@@ -10,6 +17,8 @@
     ./gh.nix
     ./ghostty.nix
     ./gtk.nix
+    ./ides.nix
+    ./nvim.nix
     ./qt.nix
     ./starship.nix
     ./stylix.nix
@@ -17,12 +26,5 @@
     ./swaync.nix
     ./xdg.nix
     ./zoxide.nix
-    ./core
-    ./fastfetch
-    ./rofi
-    ./scripts
-    ./waybar/waybar-curved.nix
-    ./wlogout
-    ./yazi
   ];
 }

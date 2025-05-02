@@ -3,9 +3,6 @@
 
   features.home = {
     cli.enable = true;
-    lazyvim.enable = true;
-    lazyvim.nvimPath = "/home/tomasz/nix-configurations/others/nvim";
-    ides.enable = true;
   };
 
   home-manager = {

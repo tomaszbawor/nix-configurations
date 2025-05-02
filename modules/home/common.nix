@@ -29,6 +29,7 @@ in
       { pkgs, ... }:
       {
         home.stateVersion = "24.11";
+
         imports = [ ./hyprland ];
 
         home.packages = with pkgs; [

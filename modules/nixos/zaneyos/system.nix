@@ -2,6 +2,8 @@
 {
   nix = {
     settings = {
+      cores = 8;
+      max-jobs = 2;
       download-buffer-size = 250000000;
       auto-optimise-store = true;
       experimental-features = [

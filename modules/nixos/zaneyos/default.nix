@@ -15,6 +15,7 @@
     ./docker.nix
     ./system.nix
     ./thunar.nix
+    ./wireshark.nix
     ./xserver.nix
   ];
 }

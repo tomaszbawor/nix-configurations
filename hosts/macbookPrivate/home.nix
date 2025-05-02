@@ -6,8 +6,6 @@
       enable = true;
       nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
     };
-    ides.enable = false;
-    gui-apps.enable = false;
   };
 
   home-manager = {

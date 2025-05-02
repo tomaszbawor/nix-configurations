@@ -19,18 +19,13 @@
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   services.xserver.xkb = {
     # Keyboard layout
     layout = "pl";
     variant = "";
   };
+
+  programs.fish.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -38,6 +33,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "wireshark"
     ];
     shell = pkgs.fish;
   };
@@ -48,7 +44,6 @@
   };
 
   programs = {
-    fish.enable = true;
     nix-ld.enable = true; # Enable nix-ld
   };
 

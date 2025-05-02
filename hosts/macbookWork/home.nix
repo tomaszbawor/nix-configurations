@@ -5,7 +5,6 @@
     cli.enable = true;
     lazyvim.enable = true;
     lazyvim.nvimPath = "/Users/${username}/nix-configurations/others/nvim";
-    ides.enable = true;
   };
 
   home-manager = {

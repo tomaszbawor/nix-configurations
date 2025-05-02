@@ -32,42 +32,6 @@
     via
     qmk-udev-rules
   ];
-  nix.settings = {
-    cores = 8;
-    max-jobs = 2;
-  };
-
-  # Wireshark setup
-  programs.wireshark = {
-    enable = true;
-    package = pkgs.wireshark;
-    dumpcap.enable = true;
-    usbmon.enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "pl2";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   environment.systemPackages = with pkgs; [
     wget
     pkg-config
@@ -91,8 +55,6 @@
 
     talosctl
 
-    gnomeExtensions.pop-shell
-    dconf2nix
     xclip
     nixfmt-rfc-style
     ollama-cuda
@@ -101,17 +63,6 @@
     arduino-ide
 
   ];
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tomasz = {
-    isNormalUser = true;
-    description = "Tomasz Bawor";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "wireshark"
-    ];
-  };
 
   # Enable automatic login for the user..
   services.displayManager.autoLogin.enable = true;
