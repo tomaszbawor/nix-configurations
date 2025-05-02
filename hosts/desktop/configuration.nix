@@ -12,9 +12,7 @@
 
   features = {
     synology-drive.enable = true;
-    docker.enable = true;
     virtualbox.enable = false;
-    steam.enable = true;
     nvidia.enable = true;
   };
 
@@ -26,22 +24,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
-
-  services.xserver = {
-    enable = true; # Enable the X11 windowing system
-
-    displayManager = {
-      gdm = {
-        enable = true;
-        autoSuspend = false;
-      };
-    };
-
-    videoDrivers = [ "nvidia" ];
-  };
 
   # Corne Keyboard
   services.udev.extraRules = ''
@@ -55,8 +37,6 @@
     cores = 8;
     max-jobs = 2;
   };
-
-  services.desktopManager.cosmic.enable = true;
 
   # Wireshark setup
   programs.wireshark = {

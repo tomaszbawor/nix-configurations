@@ -1,0 +1,18 @@
+{
+  imports = [
+    ./docker.nix
+    ./flatpak.nix
+    ./fonts.nix
+    ./greetd.nix
+    ./nh.nix
+    ./nvidia-drivers.nix
+    ./packages.nix
+    ./steam.nix
+    #./stylix.nix
+    ./thunar.nix
+    ./docker.nix
+    ./system.nix
+    ./thunar.nix
+    ./xserver.nix
+  ];
+}

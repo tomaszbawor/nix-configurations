@@ -2,23 +2,25 @@
   description = "My NixOS configuration";
 
   inputs = {
+    # Common
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    krew2nix.url = "github:eigengrau/krew2nix";
+
+    # Nixos Specific
+    hyprland.url = "github:hyprwm/Hyprland";
 
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixos-cosmic.url = "github:PhoenixPhantom/nixos-cosmic";
-    krew2nix.url = "github:eigengrau/krew2nix";
-
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
 
+    # Macos Specific
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     homebrew-bundle = {
@@ -42,15 +44,36 @@
       nixpkgs,
       darwin,
       home-manager,
-      nixos-cosmic,
       homebrew,
       flatpaks,
+      hyprland,
       ...
     }@inputs:
     {
 
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
       formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
+
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs system;
+            username = "tomasz";
+          };
+
+          modules = [
+            home-manager.nixosModules.home-manager
+            { home-manager.extraSpecialArgs = specialArgs; }
+            hyprland.homeManagerModules.default
+            flatpaks.nixosModules.declarative-flatpak
+            ./hosts/desktop/home.nix
+            ./hosts/desktop/configuration.nix
+            ./modules/nixos
+            ./modules/home
+          ];
+        };
+      };
 
       darwinConfigurations = {
         work = darwin.lib.darwinSystem rec {
@@ -61,14 +84,6 @@
           };
 
           modules = [
-            {
-              nix.settings = {
-                substituters = [ "https://cosmic.cachix.org/" ];
-                trusted-public-keys = [
-                  "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
-                ];
-              };
-            }
             { home-manager.extraSpecialArgs = specialArgs; }
             home-manager.darwinModules.home-manager
             homebrew.darwinModules.nix-homebrew
@@ -98,25 +113,5 @@
         };
       };
 
-      nixosConfigurations = {
-        desktop = nixpkgs.lib.nixosSystem rec {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs system;
-            username = "tomasz";
-          };
-
-          modules = [
-            home-manager.nixosModules.home-manager
-            { home-manager.extraSpecialArgs = specialArgs; }
-            flatpaks.nixosModules.declarative-flatpak
-            nixos-cosmic.nixosModules.default
-            ./hosts/desktop/home.nix
-            ./hosts/desktop/configuration.nix
-            ./modules/nixos
-            ./modules/home
-          ];
-        };
-      };
     };
 }
