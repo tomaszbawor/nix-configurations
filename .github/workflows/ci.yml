@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  nixos:
+    name: Build NixOS Configuration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Nix
+        uses: cachix/install-nix-action@v18
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: Build NixOS system (desktop)
+        run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
+
+  darwin:
+    name: Build Darwin Configurations
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Nix
+        uses: cachix/install-nix-action@v18
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: Build Darwin config (work)
+        run: nix build .#darwinConfigurations.work
+      - name: Build Darwin config (private)
+        run: nix build .#darwinConfigurations.private
