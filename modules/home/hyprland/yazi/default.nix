@@ -1,7 +1,7 @@
 _: {
   home.file = {
     ".config/yazi" = {
-      source = ../yazi;
+      source = ./../yazi;
       recursive = true;
     };
   };

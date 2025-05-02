@@ -6,8 +6,6 @@
     lazyvim.enable = true;
     lazyvim.nvimPath = "/home/tomasz/nix-configurations/others/nvim";
     ides.enable = true;
-    gui-apps.enable = true;
-    ghostty.enable = true;
   };
 
   home-manager = {

@@ -45,7 +45,6 @@ in
             neovim
             lua
             gcc
-            zig
             unzip
             python314Full
           ];

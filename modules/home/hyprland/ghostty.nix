@@ -3,6 +3,7 @@
   programs.ghostty = {
     enable = true;
     package = pkgs.ghostty;
+    enableFishIntegration = true;
   };
   home.file."./.config/ghostty/config".text = ''
 
