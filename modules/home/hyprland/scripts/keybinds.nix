@@ -15,4 +15,3 @@ pkgs.writeShellScriptBin "list-keybinds" ''
   echo "$display_keybinds" | rofi -dmenu -i -config ~/.config/rofi/config-long.rasi -mesg "$msg"
 
 ''
-

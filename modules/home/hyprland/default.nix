@@ -21,7 +21,7 @@
     ./fastfetch
     ./rofi
     ./scripts
-    ./waybar/waybar-ddubs.nix
+    ./waybar/waybar-curved.nix
     ./wlogout
     ./yazi
   ];

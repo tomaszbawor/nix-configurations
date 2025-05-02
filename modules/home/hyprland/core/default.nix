@@ -1,7 +1,7 @@
 { host, ... }:
 {
   imports = [
-    ./animations-dynamic.nix # May change
+    ./animations-end4.nix
     ./binds.nix
     ./hypridle.nix
     ./hyprland.nix
