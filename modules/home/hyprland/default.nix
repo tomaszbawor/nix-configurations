@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./emoji.nix
+    ./eza.nix
     ./gh.nix
     ./ghostty.nix
     ./gtk.nix

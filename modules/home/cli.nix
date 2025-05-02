@@ -79,23 +79,6 @@ in
             };
           };
 
-          programs.bat.enable = true;
-
-          programs.zoxide = {
-            enable = true;
-            enableFishIntegration = true;
-          };
-
-          programs.eza = {
-            enable = true;
-            enableFishIntegration = true;
-            enableBashIntegration = true;
-            extraOptions = [
-              "--icons"
-              "--git"
-            ];
-          };
-
           programs.fzf = {
             enable = true;
             enableFishIntegration = true;
@@ -112,8 +95,6 @@ in
             enable = true;
             enableFishIntegration = true;
           };
-
-          programs.btop.enable = true;
         };
 
     };
