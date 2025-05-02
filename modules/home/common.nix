@@ -61,11 +61,6 @@ in
           diff-so-fancy
           lazygit
 
-          # ansible
-          sshpass
-          # fonts
-          nerd-fonts.jetbrains-mono
-
           # blog
           hugo
 

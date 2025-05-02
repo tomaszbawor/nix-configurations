@@ -1,7 +1,7 @@
 {
   imports = [
     ./docker.nix
-    ./flatpak.nix
+    # ./flatpak.nix
     ./fonts.nix
     #./greetd.nix
     ./nh.nix

@@ -1,6 +1,6 @@
 {
-  host,
   config,
+  inputs,
   pkgs,
   ...
 }:
@@ -27,9 +27,10 @@
     ".face.icon".source = ./face.jpg;
     ".config/face.jpg".source = ./face.jpg;
   };
+
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.default;
     systemd = {
       enable = true;
       enableXdgAutostart = true;
