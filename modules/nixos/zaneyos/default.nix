@@ -15,7 +15,6 @@
     ./docker.nix
     ./system.nix
     ./thunar.nix
-    ./wayland.nix
     ./xserver.nix
   ];
 }
