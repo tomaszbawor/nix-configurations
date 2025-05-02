@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
 
   home.file = {
     ".config/nvim" = {
-      source = ./../../../others/nvim;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tomasz/nix-configurations/others/nvim";
       recursive = true;
     };
   };
