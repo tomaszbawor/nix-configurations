@@ -6,6 +6,7 @@
     ./btop.nix
     ./emoji.nix
     ./eza.nix
+    ./fish.nix
     ./gh.nix
     ./ghostty.nix
     ./gtk.nix
