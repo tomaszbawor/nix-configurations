@@ -3,17 +3,19 @@
     ./docker.nix
     ./flatpak.nix
     ./fonts.nix
-    ./greetd.nix
+    #./greetd.nix
     ./nh.nix
     ./nvidia-drivers.nix
     ./packages.nix
+    ./services.nix
     ./steam.nix
+    ./system.nix
     ./stylix.nix
     ./thunar.nix
     ./docker.nix
     ./system.nix
     ./thunar.nix
-    #./wayland.nix
+    ./wayland.nix
     ./xserver.nix
   ];
 }

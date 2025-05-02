@@ -7,6 +7,8 @@
       variant = "";
     };
 
+    displayManager.gdm.enable = true;
+
     windowManager.hypr.enable = true;
   };
 }

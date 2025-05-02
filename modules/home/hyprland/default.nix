@@ -10,10 +10,17 @@
     ./gtk.nix
     ./qt.nix
     ./starship.nix
-    #./stylix.nix
+    ./stylix.nix
     ./swappy.nix
     ./swaync.nix
     ./xdg.nix
     ./zoxide.nix
+    ./core
+    ./fastfetch
+    ./rofi
+    ./scripts
+    ./waybar/waybar-ddubs.nix
+    ./wlogout
+    ./yazi
   ];
 }

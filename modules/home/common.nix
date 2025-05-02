@@ -21,7 +21,7 @@ in
   };
 
   config.home-manager = {
-    backupFileExtension = "backup";
+    backupFileExtension = "bkup";
     useGlobalPkgs = true;
     useUserPackages = true;
 
@@ -29,7 +29,6 @@ in
       { pkgs, ... }:
       {
         home.stateVersion = "24.11";
-        # Correct option for enabling Hyprland home-manager module
         imports = [ ./hyprland ];
 
         home.packages = with pkgs; [

@@ -28,12 +28,6 @@
           userEmail = "bawortomasz@gmail.com";
         };
 
-        # Packages specific to this pc
-        home.packages = [
-          pkgs.gparted
-          pkgs.spotify
-        ];
-
       };
   };
 
