@@ -29,8 +29,7 @@ in
       { pkgs, ... }:
       {
         home.stateVersion = "24.11";
-        programs.home-manager.enable = true;
-        programs.wayland.enable = true;
+        # Correct option for enabling Hyprland home-manager module
         imports = [ ./hyprland ];
 
         home.packages = with pkgs; [
@@ -65,7 +64,6 @@ in
 
           # ansible
           sshpass
-
           # fonts
           nerd-fonts.jetbrains-mono
 

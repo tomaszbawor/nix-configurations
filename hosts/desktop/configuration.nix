@@ -13,7 +13,6 @@
   features = {
     synology-drive.enable = true;
     virtualbox.enable = false;
-    nvidia.enable = true;
   };
 
   # Bootloader.

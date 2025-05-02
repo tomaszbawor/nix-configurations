@@ -20,6 +20,7 @@
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
 
+    stylix.url = "github:danth/stylix";
     # Macos Specific
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
@@ -47,6 +48,7 @@
       homebrew,
       flatpaks,
       hyprland,
+      stylix,
       ...
     }@inputs:
     {
@@ -65,8 +67,9 @@
           modules = [
             home-manager.nixosModules.home-manager
             { home-manager.extraSpecialArgs = specialArgs; }
-            hyprland.homeManagerModules.default
+            #hyprland.homeManagerModules.default
             flatpaks.nixosModules.declarative-flatpak
+            stylix.nixosModules.stylix
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
             ./modules/nixos

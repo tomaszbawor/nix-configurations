@@ -10,7 +10,7 @@
     ./gtk.nix
     ./qt.nix
     ./starship.nix
-    ./stylix.nix
+    #./stylix.nix
     ./swappy.nix
     ./swaync.nix
     ./xdg.nix

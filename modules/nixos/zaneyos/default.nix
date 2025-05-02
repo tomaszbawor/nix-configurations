@@ -8,11 +8,12 @@
     ./nvidia-drivers.nix
     ./packages.nix
     ./steam.nix
-    #./stylix.nix
+    ./stylix.nix
     ./thunar.nix
     ./docker.nix
     ./system.nix
     ./thunar.nix
+    #./wayland.nix
     ./xserver.nix
   ];
 }

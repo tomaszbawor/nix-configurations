@@ -101,11 +101,6 @@ in
             enableFishIntegration = true;
           };
 
-          programs.starship = {
-            enable = true;
-            enableFishIntegration = true;
-          };
-
           programs.k9s.enable = true;
 
           programs.kubecolor = {

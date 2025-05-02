@@ -6,5 +6,7 @@
       layout = "pl";
       variant = "";
     };
+
+    windowManager.hypr.enable = true;
   };
 }
