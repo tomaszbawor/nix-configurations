@@ -91,7 +91,7 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+          monitor=HDMI-A-2,2560x1440@144,0x0,1
     ";
   };
 }
