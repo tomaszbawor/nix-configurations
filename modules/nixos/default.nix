@@ -1,5 +1,6 @@
 {
   imports = [
+    ./arudino.nix
     ./boot.nix
     ./docker.nix
     ./flatpak.nix
