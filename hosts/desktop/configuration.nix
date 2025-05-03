@@ -10,11 +10,6 @@
     ./hardware-configuration.nix
   ];
 
-  features = {
-    synology-drive.enable = true;
-    virtualbox.enable = false;
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -1,7 +1,6 @@
 { username, ... }:
 {
   features.home = {
-    cli.enable = true;
     lazyvim = {
       enable = true;
       nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
