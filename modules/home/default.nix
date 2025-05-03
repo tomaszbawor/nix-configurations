@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./common.nix
-    ./cli.nix
+    ./user-config.nix
   ];
 }

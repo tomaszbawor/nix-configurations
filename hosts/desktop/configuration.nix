@@ -33,34 +33,6 @@
     qmk-udev-rules
   ];
   environment.systemPackages = with pkgs; [
-    wget
-    pkg-config
-
-    # Lazy Vim deps
-    gcc
-    zig
-    unzip
-    # Lazy Vim deps END
-
-    # Terminal
-    ghostty
-
-    # secret management
-    sops
-    age
-
-    # Gleam
-    erlang
-    gleam
-
-    talosctl
-
-    xclip
-    nixfmt-rfc-style
-    ollama-cuda
-
-    arduino
-    arduino-ide
 
   ];
 

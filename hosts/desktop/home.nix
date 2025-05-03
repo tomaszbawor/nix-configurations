@@ -1,10 +1,6 @@
 { username, ... }:
 {
 
-  features.home = {
-    cli.enable = true;
-  };
-
   home-manager = {
     users.${username} =
       {

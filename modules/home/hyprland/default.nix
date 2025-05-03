@@ -18,12 +18,14 @@
     ./ghostty.nix
     ./gtk.nix
     ./ides.nix
+    ./kubernetes.nix
     ./nvim.nix
     ./qt.nix
     ./starship.nix
     ./stylix.nix
     ./swappy.nix
     ./swaync.nix
+    ./utils.nix
     ./xdg.nix
     ./zoxide.nix
   ];

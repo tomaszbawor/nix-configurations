@@ -1,13 +1,23 @@
 { pkgs, ... }:
 {
 
-  home.packages = [
-    pkgs.vscode
+  home.packages = with pkgs; [
+    vscode
 
-    pkgs.jetbrains.idea-ultimate
+    jetbrains.idea-ultimate
 
     # Programming tools
-    pkgs.rustup
+    rustup
+
+    # Gleam
+    erlang
+    gleam
+
+    # AI Agent
+    codex
+
+    arduino
+    arduino-ide
   ];
 
   programs.java = {
