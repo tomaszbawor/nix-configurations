@@ -7,7 +7,7 @@
   # Styling Options
   stylix = {
     enable = true;
-    image = ./../../others/wallpapers/AnimeGirlNightSky.jpg;
+    image = ./../../others/wallpapers/samurai.png;
     # base16Scheme = {
     #   base00 = "282936";
     #   base01 = "3a3c4e";

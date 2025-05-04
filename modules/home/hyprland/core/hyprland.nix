@@ -51,7 +51,7 @@
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "pypr &"
-        "sleep 1.5 && swww img ${./../../../../others/wallpapers/AnimeGirlNightSky.jpg}"
+        "sleep 1.5 && swww img ${./../../../../others/wallpapers/samurai.png}"
       ];
 
       input = {
