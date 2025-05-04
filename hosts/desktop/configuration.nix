@@ -27,9 +27,6 @@
     via
     qmk-udev-rules
   ];
-  environment.systemPackages = with pkgs; [
-
-  ];
 
   # Enable automatic login for the user..
   services.displayManager.autoLogin.enable = true;
@@ -44,9 +41,6 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   services.flatpak = {
     enable = true;

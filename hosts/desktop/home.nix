@@ -11,7 +11,6 @@
         ...
       }:
       {
-
         # Git Configuration
         programs.git = {
           enable = true;
