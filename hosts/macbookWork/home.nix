@@ -1,10 +1,6 @@
 { username, ... }:
 {
 
-  features.home = {
-    lazyvim.nvimPath = "/Users/${username}/nix-configurations/others/nvim";
-  };
-
   home-manager = {
 
     users.${username} =

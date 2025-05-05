@@ -1,11 +1,5 @@
 { username, ... }:
 {
-  features.home = {
-    lazyvim = {
-      enable = true;
-      nvimPath = "/Users/tomasz/nix-configurations/others/nvim";
-    };
-  };
 
   home-manager = {
 
