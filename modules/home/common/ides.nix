@@ -15,9 +15,6 @@
 
     # AI Agent
     codex
-
-    arduino
-    arduino-ide
   ];
 
   programs.java = {

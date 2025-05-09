@@ -4,8 +4,9 @@
   ...
 }:
 {
-
   environment.systemPackages = with pkgs; [
+    arduino
+    arduino-ide
     avrdude
     ravedude
     avrdudess

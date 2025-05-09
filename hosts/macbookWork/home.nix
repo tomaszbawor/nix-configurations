@@ -1,12 +1,6 @@
 { username, ... }:
 {
-
-  features.home = {
-    lazyvim.nvimPath = "/Users/${username}/nix-configurations/others/nvim";
-  };
-
   home-manager = {
-
     users.${username} =
       {
         pkgs,
@@ -15,8 +9,9 @@
         ...
       }:
       {
-
         imports = [ ./../../modules/home/work-packages.nix ];
+
+        my.nvim.configPath = "/Users/${username}/nix-configurations/others/nvim";
 
         programs.git = {
           enable = true;
@@ -24,5 +19,4 @@
         };
       };
   };
-
 }

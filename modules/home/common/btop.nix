@@ -1,11 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, lib, system, ... }:
 {
   programs.btop = {
     enable = true;
-    package = pkgs.btop.override {
-      rocmSupport = true;
-      cudaSupport = true;
-    };
+    package = if builtins.match ".*-darwin" system != null
+      then pkgs.btop  # Use standard btop on macOS
+      else pkgs.btop.override {  # Only use GPU support overrides on Linux
+        rocmSupport = true;
+        cudaSupport = true;
+      };
     settings = {
       vim_keys = true;
       rounded_corners = true;
