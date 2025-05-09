@@ -28,7 +28,8 @@
         home.stateVersion = "24.11";
 
         # Import common modules for all systems
-        imports = [ ./common ]
+        imports =
+          [ ./common ]
           # Conditionally import system-specific modules
           ++ (if builtins.match ".*-darwin" system != null then [ ./darwin ] else [ ./nixos ]);
       };
