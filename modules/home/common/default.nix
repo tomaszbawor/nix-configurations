@@ -10,5 +10,8 @@
     ./starship.nix
     ./zoxide.nix
     ./nvim.nix
+    ./ides.nix
+    ./kubernetes.nix
+    ./utils.nix
   ];
 }
