@@ -1,7 +1,5 @@
 # Nix Configuration Files
 
-[![Validate Pull Request](https://github.com/tomaszwostal/nix-configurations/actions/workflows/validate-pr.yml/badge.svg)](https://github.com/tomaszwostal/nix-configurations/actions/workflows/validate-pr.yml)
-
 ## Continuous Integration
 
 This repository uses GitHub Actions to validate all pull requests. The CI pipeline checks:
