@@ -21,7 +21,7 @@
   # Place Files Inside Home Directory
   home.file = {
     "Pictures/Wallpapers" = {
-      source = ../../../../others/wallpapers;
+      source = ../../../../../others/wallpapers;
       recursive = true;
     };
     ".face.icon".source = ./face.jpg;
@@ -51,7 +51,7 @@
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "pypr &"
-        "sleep 1.5 && swww img ${./../../../../others/wallpapers/samurai.png}"
+        "sleep 1.5 && swww img ${../../../../../others/wallpapers/samurai.png}"
       ];
 
       input = {
