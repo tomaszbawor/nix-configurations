@@ -27,8 +27,10 @@
       {
         home.stateVersion = "24.11";
 
-        # Conditionally import home modules based on system (darwin vs others)
-        imports = if builtins.match ".*-darwin" system != null then [ ./darwin ] else [ ./hyprland ];
+        # Import common modules for all systems
+        imports = [ ./common ]
+          # Conditionally import system-specific modules
+          ++ (if builtins.match ".*-darwin" system != null then [ ./darwin ] else [ ./nixos ]);
       };
   };
 }

@@ -9,24 +9,16 @@
     ./yazi
     ./wlogout
     ./amfora.nix
-    ./bat.nix
-    ./btop.nix
     ./emoji.nix
-    ./eza.nix
-    ./fish.nix
-    ./gh.nix
     ./ghostty.nix
     ./gtk.nix
     ./ides.nix
     ./kubernetes.nix
-    ./nvim.nix
     ./qt.nix
-    ./starship.nix
     ./stylix.nix
     ./swappy.nix
     ./swaync.nix
     ./utils.nix
     ./xdg.nix
-    ./zoxide.nix
   ];
 }
