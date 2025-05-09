@@ -8,6 +8,7 @@
 
   features.darwin = {
     commonBrew.enable = true;
+    privateBrew.enable = true;
   };
 
   # zsh is the default shell on Mac and we want to make sure that we're

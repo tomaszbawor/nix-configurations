@@ -1,8 +1,34 @@
 # Nix Configuration Files
 
+[![Validate Pull Request](https://github.com/tomaszwostal/nix-configurations/actions/workflows/validate-pr.yml/badge.svg)](https://github.com/tomaszwostal/nix-configurations/actions/workflows/validate-pr.yml)
+
+## Continuous Integration
+
+This repository uses GitHub Actions to validate all pull requests. The CI pipeline checks:
+
+1. Flake structure validation
+2. Code formatting
+3. Build validation for all configured machines:
+   - Desktop (NixOS)
+   - Work MacBook (macOS)
+   - Private MacBook (macOS)
+
+The CI configuration can be found in `.github/workflows/validate-pr.yml`.
+
+### Cachix Setup
+
+The CI pipeline uses [Cachix](https://cachix.org/) to cache build artifacts and speed up the build process. To set up Cachix:
+
+1. Create an account on [Cachix](https://cachix.org/)
+2. Create a new cache named `nix-configurations`
+3. Generate an auth token in your Cachix account settings
+4. Add the auth token as a GitHub secret named `CACHIX_AUTH_TOKEN`
+
+This will ensure that builds are cached and reused, significantly reducing build times for subsequent runs.
+
 ## Check Flake
 
-Validate if everything is fine
+Validate if everything is fine locally:
 
 ```bash
 nix flake check --all-systems

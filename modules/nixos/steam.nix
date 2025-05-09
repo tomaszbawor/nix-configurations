@@ -1,17 +1,28 @@
-{ config, lib, ... }:
-with lib;
-let
-  cfg = config.features.steam;
-in
 {
-  options.features.steam.enable = mkEnableOption "Enable steam";
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  programs = {
 
-  config = mkIf cfg.enable {
-    programs = {
-      steam = {
-        enable = true; # Enable Steam
-        gamescopeSession.enable = true;
-      };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = false;
+      gamescopeSession.enable = true;
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
+
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+      args = [
+        "--rt"
+        "--expose-wayland"
+      ];
+    };
+
   };
 }

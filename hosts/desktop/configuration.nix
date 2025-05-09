@@ -10,14 +10,6 @@
     ./hardware-configuration.nix
   ];
 
-  features = {
-    synology-drive.enable = true;
-    docker.enable = true;
-    virtualbox.enable = false;
-    steam.enable = true;
-    nvidia.enable = true;
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -27,22 +19,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
-
-  services.xserver = {
-    enable = true; # Enable the X11 windowing system
-
-    displayManager = {
-      gdm = {
-        enable = true;
-        autoSuspend = false;
-      };
-    };
-
-    videoDrivers = [ "nvidia" ];
-  };
-
   # Corne Keyboard
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTR{idVendor}=="4653", ATTR{idProduct}=="0001", MODE="0666"
@@ -51,88 +27,6 @@
     via
     qmk-udev-rules
   ];
-  nix.settings = {
-    cores = 8;
-    max-jobs = 2;
-  };
-
-  services.desktopManager.cosmic.enable = true;
-
-  # Wireshark setup
-  programs.wireshark = {
-    enable = true;
-    package = pkgs.wireshark;
-    dumpcap.enable = true;
-    usbmon.enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "pl2";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    wget
-    pkg-config
-
-    # Lazy Vim deps
-    gcc
-    zig
-    unzip
-    # Lazy Vim deps END
-
-    # Terminal
-    ghostty
-
-    # secret management
-    sops
-    age
-
-    # Gleam
-    erlang
-    gleam
-
-    talosctl
-
-    gnomeExtensions.pop-shell
-    dconf2nix
-    xclip
-    nixfmt-rfc-style
-    ollama-cuda
-
-    arduino
-    arduino-ide
-
-  ];
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tomasz = {
-    isNormalUser = true;
-    description = "Tomasz Bawor";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "wireshark"
-    ];
-  };
 
   # Enable automatic login for the user..
   services.displayManager.autoLogin.enable = true;
@@ -147,9 +41,6 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   services.flatpak = {
     enable = true;
