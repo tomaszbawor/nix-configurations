@@ -8,6 +8,11 @@
     loginShellInit = ''
       fnm env --use-on-cd --shell fish | source
     '';
+    
+    interactiveShellInit = ''
+      fnm env --use-on-cd --shell fish | source
+    '';
+    
     shellAliases = {
       ls = "eza";
       cat = "bat";
