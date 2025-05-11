@@ -38,6 +38,7 @@
     jujutsu
     tldr
     cht-sh
+    lsof
 
     # git
     diff-so-fancy
