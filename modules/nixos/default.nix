@@ -7,6 +7,7 @@
     ./fonts.nix
     ./nh.nix
     ./nvidia-drivers.nix
+    ./ollama.nix
     ./packages.nix
     ./services.nix
     ./steam.nix

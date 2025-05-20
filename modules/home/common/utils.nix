@@ -63,9 +63,6 @@
     xclip
     nixfmt-rfc-style
     claude-code
-
-    ollama-cuda
-
   ];
 
 }
