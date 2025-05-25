@@ -32,6 +32,8 @@
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 
   system = {
+    primaryUser = "${username}";
+
     stateVersion = 4;
     # Turn off NIX_PATH warnings now that we're using flakes
     checks.verifyNixPath = false;

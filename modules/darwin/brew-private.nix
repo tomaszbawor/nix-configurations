@@ -14,6 +14,7 @@ in
 
       # Add any private-specific casks here
       casks = [
+        "bambu-studio"
         # Add your private-specific casks here
       ];
 
@@ -24,4 +25,3 @@ in
     };
   };
 }
-
