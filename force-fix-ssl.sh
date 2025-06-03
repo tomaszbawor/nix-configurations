@@ -38,4 +38,16 @@ sleep 3
 echo "Testing connection..."
 NIX_SSL_CERT_FILE=/etc/nix/ca_cert.pem curl -I https://cache.nixos.org
 
-echo "Done. Try your command again."
+echo "Done. Setting up environment..."
+
+# Export SSL certificate for current session
+export NIX_SSL_CERT_FILE=/etc/nix/ca_cert.pem
+
+echo ""
+echo "SSL certificates have been fixed!"
+echo ""
+echo "To use darwin-rebuild, run:"
+echo "  sudo NIX_SSL_CERT_FILE=/etc/nix/ca_cert.pem darwin-rebuild switch --flake .#work"
+echo ""
+echo "Or add this to your shell profile:"
+echo "  export NIX_SSL_CERT_FILE=/etc/nix/ca_cert.pem"
