@@ -68,7 +68,7 @@
             home-manager.nixosModules.home-manager
             { home-manager.extraSpecialArgs = specialArgs; }
             #hyprland.homeManagerModules.default
-            flatpaks.nixosModules.declarative-flatpak
+            flatpaks.nixosModule
             stylix.nixosModules.stylix
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
