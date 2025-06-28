@@ -146,6 +146,16 @@ afterwards the subsequent updates can be done by running:
 darwin-rebuild switch --flake .#work
 ```
 
+## Using Nix Helper
+
+By using nix helper I am able to utilize it in order to build systems without writing long prompts.
+
+By setting proper desktop network name that matches with output of the flake and proper flake directory under "nh.nix" file. I just can run
+
+```
+nh os switch
+```
+
 ## Known Problems
 
 - <https://github.com/NixOS/nix/issues/8771#issuecomment-1662633816>
