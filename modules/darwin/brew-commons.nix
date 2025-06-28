@@ -18,7 +18,7 @@ in
         "ghostty"
         "1password-cli"
         "bruno"
-        "docker"
+        "docker-desktop"
         "obsidian"
         "rectangle-pro"
       ];
