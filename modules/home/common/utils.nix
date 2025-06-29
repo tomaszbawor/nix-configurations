@@ -63,6 +63,11 @@
     xclip
     nixfmt-rfc-style
     claude-code
+
+    nh
+    nix-output-monitor
+    nvd
+
   ];
 
 }

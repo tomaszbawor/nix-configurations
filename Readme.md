@@ -156,6 +156,15 @@ By setting proper desktop network name that matches with output of the flake and
 nh os switch
 ```
 
+For Macbook you can use in this directory:
+
+```
+nh darwin switch -u -H private .  
+```
+
+-u flag makes updateds all flake inputs
+-H flag points to the hostname in the flake
+
 ## Known Problems
 
 - <https://github.com/NixOS/nix/issues/8771#issuecomment-1662633816>
