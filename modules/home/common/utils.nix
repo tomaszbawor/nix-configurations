@@ -39,6 +39,7 @@
     tldr
     cht-sh
     lsof
+    kitty
 
     # git
     diff-so-fancy
