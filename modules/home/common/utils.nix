@@ -68,6 +68,7 @@
     nh
     nix-output-monitor
     nvd
+    bun
 
   ];
 
