@@ -20,4 +20,10 @@
     enable = true;
     port = 1234;
   };
+
+  services.n8n = {
+    enable = true;
+    openFirewall = true;
+  };
+
 }
