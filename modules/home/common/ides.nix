@@ -12,9 +12,6 @@
     # Gleam
     erlang
     gleam
-
-    # AI Agent
-    codex
   ];
 
   programs.java = {
