@@ -10,7 +10,7 @@ return {
         explorer = {
           hidden = true, -- ‹dotfiles› like .env, .gitignore, …
           ignored = false, -- set to true if you also want .gitignored items
-          include = { ".gitignore" },
+          include = { ".gitignore", ".env" },
           -- exclude  = { ".git", "node_modules" }, -- optional filters
           -- include  = { ".env" },                 -- whitelist patterns
         },
