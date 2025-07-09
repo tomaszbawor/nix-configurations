@@ -8,7 +8,6 @@ in
 
   config = mkIf cfg.enable {
     homebrew = {
-      brews = [ "ollama" ];
       casks = [ "vmware-horizon-client" ];
     };
   };

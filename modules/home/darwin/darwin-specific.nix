@@ -12,4 +12,6 @@
   # Import or configure any home-manager modules you want applied only on macOS here.
   # Example:
   # home.packages = with pkgs; [ starship ];
+  #
+  services.ollama.enable = true;
 }
