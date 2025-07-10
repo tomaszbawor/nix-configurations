@@ -40,6 +40,7 @@
     cht-sh
     lsof
     kitty
+    jless
 
     # git
     diff-so-fancy
