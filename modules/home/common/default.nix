@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
     ./eza.nix
     ./fish.nix
     ./gh.nix
+    ./ideavim.nix
     ./starship.nix
     ./zoxide.nix
     ./nvim.nix
