@@ -4,7 +4,10 @@
   home.packages = with pkgs; [
     vscode
 
-    #jetbrains.idea-ultimate
+    # Ovverride JDK fixes intellij java sdk build failure
+    (jetbrains.idea-ultimate.override {
+      jdk = pkgs.openjdk21;
+    })
 
     # Programming tools
     rustup
