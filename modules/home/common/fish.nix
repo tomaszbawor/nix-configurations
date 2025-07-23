@@ -37,6 +37,7 @@
       # Gradle
       gb = "./gradlew build";
       gkf = "./gradlew ktlintFormat";
+      gsa = "./graldew spotlessApply";
 
       # Ultilities
       gites = "git add .; git commit --amend --no-edit; git push -f";

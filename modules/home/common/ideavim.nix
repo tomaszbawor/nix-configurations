@@ -35,6 +35,9 @@
     map <leader>rn <Action>(RenameElement)
     map <leader>ca <Action>(ShowIntentionActions)
 
+    " NERDTree
+    map <leader>n :NERDTreeToggle<CR>
+
     " Quick escape
     inoremap jj <ESC>
   '';
