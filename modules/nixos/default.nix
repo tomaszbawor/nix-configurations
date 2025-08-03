@@ -5,6 +5,7 @@
     ./docker.nix
     ./flatpak.nix
     ./fonts.nix
+    ./freecad.nix
     ./nh.nix
     ./nvidia-drivers.nix
     ./ollama.nix
