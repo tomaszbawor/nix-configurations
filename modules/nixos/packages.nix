@@ -24,23 +24,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      coin3d = prev.coin3d.overrideAttrs {
-        src = prev.fetchFromGitHub {
-          owner = "coin3d";
-          repo = "coin";
-          rev = "v4.0.3";
-          hash = "sha256-dUFmcUOdNc3ZFtr+Hnh3Q3OY/JA/WxmiRJiU2RFSSus=";
-        };
-      };
-    })
-  ];
-
   environment.systemPackages = with pkgs; [
-    amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
-    brave # Brave Browser
     brightnessctl # For Screen Brightness Control
     cliphist # Clipboard manager using rofi menu
     cmatrix # Matrix Movie Effect In Terminal
@@ -85,7 +70,5 @@
     obsidian # Note taking application
     bruno # Testing HTTP API
     google-chrome # Browser
-    brave # Browser
-    freecad-qt6
   ];
 }
