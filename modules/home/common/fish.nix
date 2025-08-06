@@ -5,6 +5,7 @@
     enable = true;
     generateCompletions = true;
 
+    # FNM - Node Version Manger
     loginShellInit = ''
       fnm env --use-on-cd --shell fish | source
     '';

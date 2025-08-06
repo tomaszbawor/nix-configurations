@@ -63,14 +63,12 @@
     age
 
     xclip
-    nixfmt-rfc-style
-    claude-code
 
+    # Nix Utils
     nh
     nix-output-monitor
     nvd
-    bun
-
+    nixfmt-rfc-style
   ];
 
 }

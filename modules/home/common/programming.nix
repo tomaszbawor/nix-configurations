@@ -15,6 +15,9 @@
     # Gleam
     erlang
     gleam
+
+    # JS runtime
+    bun
   ];
 
   programs.java = {

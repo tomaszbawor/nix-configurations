@@ -11,7 +11,7 @@
     ./starship.nix
     ./zoxide.nix
     ./nvim.nix
-    ./ides.nix
+    ./programming.nix
     ./kubernetes.nix
     ./utils.nix
     ./vibecoding.nix
