@@ -14,5 +14,6 @@
     ./ides.nix
     ./kubernetes.nix
     ./utils.nix
+    ./vibecoding.nix
   ];
 }
