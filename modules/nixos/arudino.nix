@@ -13,6 +13,5 @@
     pkgsCross.avr.buildPackages.gcc
     pkgsCross.avr.buildPackages.binutils
     pkgsCross.avr.buildPackages.avrdude
-    bambu-studio
   ];
 }
