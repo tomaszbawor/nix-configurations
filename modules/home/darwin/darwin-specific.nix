@@ -13,5 +13,5 @@
   # Example:
   # home.packages = with pkgs; [ starship ];
   #
-  services.ollama.enable = true;
+  services.ollama.enable = false;
 }
