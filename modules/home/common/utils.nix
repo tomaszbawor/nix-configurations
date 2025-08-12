@@ -69,6 +69,9 @@
     nix-output-monitor
     nvd
     nixfmt-rfc-style
+
+    # Python
+    uv
   ];
 
 }
