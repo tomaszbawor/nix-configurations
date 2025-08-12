@@ -4,7 +4,7 @@
   services = {
 
     flatpak = {
-      enable = false; # Enable Flatpak
+      enable = true; # Enable Flatpak
       remotes = {
         "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
         "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
