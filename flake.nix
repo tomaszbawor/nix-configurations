@@ -18,7 +18,7 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
+    flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
 
     stylix.url = "github:danth/stylix";
     # Macos Specific
