@@ -18,8 +18,8 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
     stylix.url = "github:danth/stylix";
     # Macos Specific
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
@@ -46,9 +46,9 @@
       darwin,
       home-manager,
       homebrew,
-      flatpaks,
       hyprland,
       stylix,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -72,7 +72,7 @@
             ./hosts/desktop/configuration.nix
             ./modules/nixos
             ./modules/home
-            flatpaks.nixosModule
+            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
       };

@@ -205,22 +205,6 @@
         "type": "github"
       }
     },
-    "flatpaks": {
-      "locked": {
-        "lastModified": 1754772718,
-        "narHash": "sha256-AlYxWTqGiYlyMbMkh7Zt+2wekPxd3d1x6INbr2nQtTI=",
-        "owner": "in-a-dil-emma",
-        "repo": "declarative-flatpak",
-        "rev": "8ca8ff9fffb6c94561b74f79569a0ac0e43464c2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "in-a-dil-emma",
-        "ref": "stable-v3",
-        "repo": "declarative-flatpak",
-        "type": "github"
-      }
-    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -349,11 +333,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1755008804,
-        "narHash": "sha256-FHaETizSQPA1NlExg2CCpeMaY9+p6bvktbSTZRVEVoI=",
+        "lastModified": 1755009837,
+        "narHash": "sha256-KCtaSZOPRIB+NGOWA+on/TcweP5QynzvvktFaP/GwHw=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "ffbaa9e646ec6f20274e85e9dcf39e903c60ed7f",
+        "rev": "eb9d7212ecb9118aff4159f727ab3b518c12b8c4",
         "type": "github"
       },
       "original": {
@@ -640,6 +624,21 @@
         "type": "github"
       }
     },
+    "nix-flatpak": {
+      "locked": {
+        "lastModified": 1754777568,
+        "narHash": "sha256-0bBqT+3XncgF8F03RFAamw9vdf0VmaDoIJLTGkjfQZs=",
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "rev": "62f636b87ef6050760a8cb325cadb90674d1e23e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1754725699,
@@ -751,7 +750,6 @@
     "root": {
       "inputs": {
         "darwin": "darwin",
-        "flatpaks": "flatpaks",
         "home-manager": "home-manager",
         "homebrew": "homebrew",
         "homebrew-bundle": "homebrew-bundle",
@@ -759,6 +757,7 @@
         "homebrew-core": "homebrew-core",
         "hyprland": "hyprland",
         "krew2nix": "krew2nix",
+        "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_3",
         "stylix": "stylix"
       }
