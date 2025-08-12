@@ -67,13 +67,12 @@
           modules = [
             home-manager.nixosModules.home-manager
             { home-manager.extraSpecialArgs = specialArgs; }
-            #hyprland.homeManagerModules.default
-            flatpaks.nixosModule
             stylix.nixosModules.stylix
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
             ./modules/nixos
             ./modules/home
+            flatpaks.nixosModule
           ];
         };
       };

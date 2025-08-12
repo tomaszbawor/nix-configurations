@@ -42,19 +42,6 @@
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
 
-  services.flatpak = {
-    enable = true;
-    packages = [
-      "flathub:app/com.mattjakeman.ExtensionManager/x86_64/stable"
-      "flathub:app/app.freelens.Freelens/x86_64/stable"
-    ];
-
-    remotes = {
-      "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-      "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
-    };
-  };
-
   nixpkgs.config.permittedInsecurePackages = [
     "libsoup-2.74.3"
   ];
