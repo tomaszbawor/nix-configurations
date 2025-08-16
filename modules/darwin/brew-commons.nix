@@ -21,6 +21,7 @@ in
         "docker-desktop"
         "obsidian"
         "rectangle-pro"
+        "freecad"
       ];
       brews = [
         #"ffmpeg"
