@@ -24,8 +24,6 @@ in
         "freecad"
       ];
       brews = [
-        #"ffmpeg"
-        #"imagemagick"
         "libiconv"
         "talosctl"
       ];
