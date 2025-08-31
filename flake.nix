@@ -11,16 +11,13 @@
     };
     krew2nix.url = "github:eigengrau/krew2nix";
 
-    # Nixos Specific
-    hyprland.url = "github:hyprwm/Hyprland";
-
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
-    stylix.url = "github:danth/stylix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.darwin
+
     # Macos Specific
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
@@ -46,8 +43,6 @@
       darwin,
       home-manager,
       homebrew,
-      hyprland,
-      stylix,
       nix-flatpak,
       ...
     }@inputs:
@@ -67,7 +62,6 @@
           modules = [
             home-manager.nixosModules.home-manager
             { home-manager.extraSpecialArgs = specialArgs; }
-            stylix.nixosModules.stylix
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
             ./modules/nixos

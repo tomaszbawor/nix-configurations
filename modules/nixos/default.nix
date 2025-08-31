@@ -12,7 +12,6 @@
     ./packages.nix
     ./services.nix
     ./steam.nix
-    ./stylix.nix
     ./synology-drive.nix
     ./system.nix
     ./thunar.nix
