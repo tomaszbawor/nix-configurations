@@ -62,6 +62,9 @@
     sops
     age
 
+    # terminal
+    wezterm
+
     xclip
 
     # Nix Utils
