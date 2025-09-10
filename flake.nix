@@ -18,6 +18,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.darwin
 
+    cosmic-nightly.url = "github:busyboredom/cosmic-nightly-flake";
     # Macos Specific
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
@@ -44,6 +45,7 @@
       home-manager,
       homebrew,
       nix-flatpak,
+      cosmic-nightly,
       ...
     }@inputs:
     {
@@ -62,6 +64,9 @@
           modules = [
             home-manager.nixosModules.home-manager
             { home-manager.extraSpecialArgs = specialArgs; }
+            ({
+              nixpkgs.overlays = [ cosmic-nightly.overlays.default ];
+            })
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
             ./modules/nixos
