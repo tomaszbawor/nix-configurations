@@ -31,7 +31,6 @@
       lua
       gcc
       unzip
-      python314Full
     ];
   };
 }
