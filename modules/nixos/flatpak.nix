@@ -20,11 +20,12 @@
       ];
 
       packages = [
-        {
-          appId = "org.freecad.FreeCAD";
-          origin = "beta";
-        }
+        # {
+        #   appId = "org.freecad.FreeCAD";
+        #   origin = "beta";
+        # }
         "com.bambulab.BambuStudio"
+        "org.freecad.FreeCAD"
       ];
 
       update.onActivation = true;
