@@ -15,9 +15,8 @@ in
       casks = [
         "bruno"
         "1password"
-        "ghostty"
+        "wezterm"
         "1password-cli"
-        "bruno"
         "docker-desktop"
         "obsidian"
         "rectangle-pro"

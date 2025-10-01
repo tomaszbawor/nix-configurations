@@ -8,12 +8,13 @@
     ./fish.nix
     ./gh.nix
     ./ideavim.nix
-    ./starship.nix
-    ./zoxide.nix
+    ./kubernetes.nix
     ./nvim.nix
     ./programming.nix
-    ./kubernetes.nix
+    ./starship.nix
+    ./tools.nix
     ./utils.nix
     ./vibecoding.nix
+    ./zoxide.nix
   ];
 }

@@ -8,7 +8,7 @@ in
 
   config = mkIf cfg.enable {
     homebrew = {
-      casks = [ "vmware-horizon-client" ];
+      casks = [ "omnissa-horizon-client" ];
     };
   };
 }

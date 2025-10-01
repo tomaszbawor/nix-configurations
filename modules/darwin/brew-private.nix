@@ -9,13 +9,12 @@ in
   config = mkIf cfg.enable {
     homebrew = {
       brews = [
-        "libiconv"
+        # Private brews
       ];
 
       # Add any private-specific casks here
       casks = [
         "bambu-studio"
-        # Add your private-specific casks here
       ];
 
       # Add any private-specific Mac App Store apps here
