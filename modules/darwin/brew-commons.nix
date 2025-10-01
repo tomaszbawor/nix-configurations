@@ -21,6 +21,7 @@ in
         "obsidian"
         "rectangle-pro"
         "freecad"
+        "todoist-app"
       ];
       brews = [
         "libiconv"

@@ -2,9 +2,7 @@
 {
 
   home.packages = with pkgs; [
-
     todoist
-
   ];
 
 }
