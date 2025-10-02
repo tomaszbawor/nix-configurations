@@ -41,6 +41,7 @@
     lsof
     kitty
     jless
+    tree
 
     # git
     diff-so-fancy
