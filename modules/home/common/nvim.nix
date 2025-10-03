@@ -28,9 +28,15 @@
 
     home.packages = with pkgs; [
       neovim
-      lua
       gcc
       unzip
+
+      # Dependencies for plugins
+      lua51Packages.lua
+      luarocks
+      python314
+      shfmt
+      fd
     ];
   };
 }
