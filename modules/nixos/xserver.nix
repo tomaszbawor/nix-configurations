@@ -7,7 +7,7 @@
       variant = "";
     };
 
-    windowManager.hypr.enable = true;
+    # windowManager.hypr.enable = true;
   };
 
   services.displayManager.gdm.enable = true;
