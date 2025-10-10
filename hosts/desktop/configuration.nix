@@ -19,9 +19,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  services.desktopManager.cosmic.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
-
   # Corne Keyboard
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTR{idVendor}=="4653", ATTR{idProduct}=="0001", MODE="0666"
@@ -32,8 +29,10 @@
   ];
 
   # Enable automatic login for the user..
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "tomasz";
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "tomasz";
+  };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
@@ -45,9 +44,9 @@
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "libsoup-2.74.3"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "libsoup-2.74.3"
+  # ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
