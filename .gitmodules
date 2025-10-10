@@ -1,0 +1,3 @@
+[submodule "others/nvim"]
+	path = others/nvim
+	url = git@github.com:tomaszbawor/tbawor-neovim-configuration.git
