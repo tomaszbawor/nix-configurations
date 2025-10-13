@@ -18,6 +18,9 @@
 
     # JS runtime
     bun
+
+    ## Lua package manager 
+    lux-cli
   ];
 
   programs.java = {
