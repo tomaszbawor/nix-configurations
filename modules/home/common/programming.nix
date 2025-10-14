@@ -5,9 +5,7 @@
     vscode
 
     # Ovverride JDK fixes intellij java sdk build failure
-    # (jetbrains.idea-ultimate.override {
-    #   jdk = pkgs.openjdk21;
-    # })
+    jetbrains.idea-ultimate
 
     # Programming tools
     rustup
