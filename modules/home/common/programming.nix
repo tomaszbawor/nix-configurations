@@ -17,7 +17,7 @@
     # JS runtime
     bun
 
-    ## Lua package manager 
+    ## Lua package manager
     lux-cli
   ];
 

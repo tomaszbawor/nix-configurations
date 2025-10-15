@@ -6,22 +6,9 @@
     enableFishIntegration = true;
   };
 
-  programs.tmux = {
-    enable = true;
-    clock24 = true;
-    keyMode = "vi";
-    shell = "${pkgs.fish}/bin/fish";
-    mouse = true;
-    baseIndex = 1;
-  };
-
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  programs.zellij = {
-    enable = true;
   };
 
   programs.fzf = {

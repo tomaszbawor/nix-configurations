@@ -12,6 +12,7 @@
     ./nvim.nix
     ./programming.nix
     ./starship.nix
+    ./tmux.nix
     ./tools.nix
     ./utils.nix
     ./vibecoding.nix
