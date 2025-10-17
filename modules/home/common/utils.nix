@@ -42,6 +42,7 @@
 
     # others
     repomix # zipping repo into one file
+    systemctl-tui # tui for systemctl logs browsing
 
     cocogitto # conventional commits helper
     fnm # Node version manager
@@ -63,6 +64,9 @@
 
     # Python
     uv
+
+    # Docker
+    lazydocker
   ];
 
 }
