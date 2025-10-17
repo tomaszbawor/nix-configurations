@@ -9,6 +9,7 @@ in
   config = mkIf cfg.enable {
     homebrew = {
       casks = [ "omnissa-horizon-client" ];
+      brews = [ "ollama" ];
     };
   };
 }

@@ -1,8 +1,7 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
+{ pkgs
+, config
+, lib
+, ...
 }:
 
 {
@@ -33,7 +32,7 @@
       unzip
       lua51Packages.lua
       luarocks
-      python314
+      python312
       shfmt
       fd
       ripgrep
