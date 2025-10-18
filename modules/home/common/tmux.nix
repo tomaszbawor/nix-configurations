@@ -16,18 +16,26 @@
     secureSocket = false;
     historyLimit = 50000;
 
-    plugins = with pkgs;[
+    plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
+      tmuxPlugins.tmux-powerline
     ];
 
-
-
-
     extraConfig = ''
+      # Plugins
+      set -g @tmux_powerline_theme 'default'   # or 'solarized', etc.
+
+      # Change Windows as in Vim 
       bind h select-pane -L
       bind j select-pane -D
       bind k select-pane -U
       bind l select-pane -R
+
+      # Intuitive Splits
+      bind | split-window -h
+      bind - split-window -v
+      unbind "
+      unbind %
     '';
   };
 
