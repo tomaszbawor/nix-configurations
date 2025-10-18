@@ -22,6 +22,10 @@
     ];
 
     extraConfig = ''
+      # Terminal setup (Neovim is crying about them)
+      set-option -g default-terminal "screen-256color"
+      set-option -a terminal-features 'XXX:RGB'
+
       # Plugins
       set -g @tmux_powerline_theme 'default'   # or 'solarized', etc.
 
