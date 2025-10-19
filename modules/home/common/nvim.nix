@@ -37,6 +37,8 @@
       shfmt
       fd
       ripgrep
+      netcat
+      socat
     ];
   };
 }

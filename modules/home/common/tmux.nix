@@ -18,16 +18,12 @@
 
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
-      tmuxPlugins.tmux-powerline
     ];
 
     extraConfig = ''
       # Terminal setup (Neovim is crying about them)
       set-option -g default-terminal "screen-256color"
       set-option -a terminal-features 'XXX:RGB'
-
-      # Plugins
-      set -g @tmux_powerline_theme 'default'   # or 'solarized', etc.
 
       # Change Windows as in Vim 
       bind h select-pane -L
@@ -39,7 +35,7 @@
       bind | split-window -h
       bind - split-window -v
       unbind "
-      unbind %
+      # unbind %
     '';
   };
 
