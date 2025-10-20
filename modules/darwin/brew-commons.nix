@@ -26,6 +26,7 @@ in
       brews = [
         "libiconv"
         "talosctl"
+        "wget"
       ];
       onActivation = {
         cleanup = "zap";
