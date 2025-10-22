@@ -14,10 +14,14 @@
         # Git Configuration
         programs.git = {
           enable = true;
-          userName = "Tomasz Bawor";
-          userEmail = "bawortomasz@gmail.com";
-        };
 
+          settings = {
+            user = {
+              name = "Tomasz Bawor";
+              email = "bawortomasz@gmail.com";
+            };
+          };
+        };
       };
   };
 

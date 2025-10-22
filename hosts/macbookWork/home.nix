@@ -15,7 +15,11 @@
 
         programs.git = {
           enable = true;
-          userName = "Tomasz Bawor";
+          settings = {
+            user = {
+              name = "Tomasz Bawor";
+            };
+          };
         };
       };
   };

@@ -25,6 +25,12 @@
       set-option -g default-terminal "screen-256color"
       set-option -a terminal-features 'XXX:RGB'
 
+      # switch panes using Alt-arrow without prefix
+      bind -n M-Left select-pane -L
+      bind -n M-Right select-pane -R
+      bind -n M-Up select-pane -U
+      bind -n M-Down select-pane -D
+
       # Change Windows as in Vim 
       bind h select-pane -L
       bind j select-pane -D
@@ -35,7 +41,7 @@
       bind | split-window -h
       bind - split-window -v
       unbind "
-      # unbind %
+      unbind %
     '';
   };
 
