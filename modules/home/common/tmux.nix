@@ -18,6 +18,9 @@
 
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
+      tmuxPlugins.cpu
+      tmuxPlugins.sensible
+      tmuxPlugins.yank
     ];
 
     extraConfig = ''
@@ -40,8 +43,6 @@
       # Intuitive Splits
       bind | split-window -h
       bind - split-window -v
-      unbind "
-      unbind %
     '';
   };
 
