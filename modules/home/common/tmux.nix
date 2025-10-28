@@ -19,8 +19,9 @@
 
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
-      tmuxPlugins.cpu
-      tmuxPlugins.yank
+      tmuxPlugins.tmux-fzf # Fuzzy Find in TMUX
+      tmuxPlugins.vim-tmux-navigator # Using ctrl-j k l h for switch windows
+      tmuxPlugins.catppuccin
     ];
 
     extraConfig = ''
@@ -43,6 +44,19 @@
       # Intuitive Splits
       bind | split-window -h
       bind - split-window -v
+
+      # Theme
+      set -g @catppuccin_window_text \"#W\"
+      set -g @catppuccin_status_modules_right "date_time battery directory session"
+      set -g @catppuccin_window_default_text "#W"
+      set -g @catppuccin_window_text "#W"
+      set -g @catppuccin_window_current_text "#W"
+
+      set -g status-position top
+      set -g window-status-current-style fg=red,bg=black
+      set -g status-interval 1
+      set -g status-left-length 100
+      set -g status-left ""
     '';
   };
 
