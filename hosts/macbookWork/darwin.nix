@@ -9,14 +9,7 @@
   # configuring the rc correctly with nix-darwin paths.
   programs.zsh.enable = true;
 
-  programs.fish.enable = true;
-
-  programs.fish.shellInit = ''
-    fnm env --use-on-cd --shell fish | source
-  '';
-
   environment.shells = [
-    pkgs.fish
     pkgs.zsh
     pkgs.bashInteractive
   ];

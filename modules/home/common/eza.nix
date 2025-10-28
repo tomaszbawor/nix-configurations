@@ -3,7 +3,7 @@
 
   programs.eza = {
     enable = true;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
     enableBashIntegration = true;
     extraOptions = [
       "--icons"

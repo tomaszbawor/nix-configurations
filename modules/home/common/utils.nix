@@ -3,7 +3,7 @@
 
   programs.atuin = {
     enable = true;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.direnv = {
@@ -13,7 +13,7 @@
 
   programs.fzf = {
     enable = true;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
   };
 
   home.packages = with pkgs; [

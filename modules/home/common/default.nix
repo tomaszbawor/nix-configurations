@@ -5,7 +5,6 @@
     ./bat.nix
     ./btop.nix
     ./eza.nix
-    ./fish.nix
     ./gh.nix
     ./ideavim.nix
     ./kubernetes.nix
@@ -17,5 +16,6 @@
     ./utils.nix
     ./vibecoding.nix
     ./zoxide.nix
+    ./zsh.nix
   ];
 }

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   username,
   ...
@@ -15,10 +14,7 @@
   # configuring the rc correctly with nix-darwin paths.
   programs.zsh.enable = true;
 
-  programs.fish.enable = true;
-
   environment.shells = [
-    pkgs.fish
     pkgs.zsh
     pkgs.bashInteractive
   ];
@@ -26,7 +22,7 @@
   # User Darwin Settings
   users.users.${username} = {
     home = "/Users/${username}";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];

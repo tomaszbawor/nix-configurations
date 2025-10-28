@@ -3,7 +3,7 @@
   programs.starship = {
     enable = true;
     package = pkgs.starship;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
     enableInteractive = true;
   };
 }

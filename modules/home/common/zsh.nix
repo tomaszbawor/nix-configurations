@@ -1,18 +1,18 @@
 { ... }:
 {
 
-  programs.fish = {
+  programs.zsh = {
     enable = true;
-    generateCompletions = true;
+    enableCompletion = true;
 
-    # FNM - Node Version Manger
-    loginShellInit = ''
-      fnm env --use-on-cd --shell fish | source
-    '';
-
-    interactiveShellInit = ''
-      fnm env --use-on-cd --shell fish | source
-    '';
+    # # FNM - Node Version Manger
+    # loginShellInit = ''
+    #   fnm env --use-on-cd --shell zsh | source
+    # '';
+    #
+    # interactiveShellInit = ''
+    #   fnm env --use-on-cd --shell zsh | source
+    # '';
 
     shellAliases = {
       ls = "eza";

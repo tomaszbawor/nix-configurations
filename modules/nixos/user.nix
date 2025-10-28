@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 {
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -11,7 +11,7 @@
       "wheel"
       "wireshark"
     ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
 }
