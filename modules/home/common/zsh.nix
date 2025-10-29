@@ -1,18 +1,16 @@
-{ ... }:
+{ lib, ... }:
 {
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
 
-    # # FNM - Node Version Manger
-    # loginShellInit = ''
-    #   fnm env --use-on-cd --shell zsh | source
-    # '';
-    #
-    # interactiveShellInit = ''
-    #   fnm env --use-on-cd --shell zsh | source
-    # '';
+    # FNM - Node Version Manger
+    initContent = lib.mkOrder 1200 ''
+       eval "$(fnm env --use-on-cd --shell zsh)"
+    '';
 
     shellAliases = {
       ls = "eza";

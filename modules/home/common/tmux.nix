@@ -8,6 +8,7 @@
     shell = "${pkgs.zsh}/bin/zsh";
     mouse = true;
     baseIndex = 1;
+    tmuxinator.enable = true;
 
     newSession = true;
     # fixing tmux-escape crazy behaviour
@@ -17,11 +18,10 @@
     historyLimit = 50000;
     sensibleOnTop = true;
 
-    plugins = with pkgs; [
-      tmuxPlugins.better-mouse-mode
-      tmuxPlugins.tmux-fzf # Fuzzy Find in TMUX
-      tmuxPlugins.vim-tmux-navigator # Using ctrl-j k l h for switch windows
-      tmuxPlugins.catppuccin
+    plugins = with pkgs.tmuxPlugins; [
+      better-mouse-mode
+      tmux-fzf # Fuzzy Find in TMUX
+      vim-tmux-navigator # Using ctrl-j k l h for switch windows
     ];
 
     extraConfig = ''
@@ -45,12 +45,20 @@
       bind | split-window -h
       bind - split-window -v
 
-      # Theme
-      set -g @catppuccin_window_text \"#W\"
-      set -g @catppuccin_status_modules_right "date_time battery directory session"
-      set -g @catppuccin_window_default_text "#W"
-      set -g @catppuccin_window_text "#W"
-      set -g @catppuccin_window_current_text "#W"
+      # --- Status bar ---
+      set -g status-position top
+      set -g status-bg colour235
+      set -g status-fg colour245
+      set -g status-interval 5
+      set -g status-left-length 40
+      set -g status-right-length 120
+
+      set -g status-left "#[fg=colour39,bold]#S #[fg=colour240]| #[fg=colour39]#I:#P"
+      set -g status-right "#[fg=colour244]%Y-%m-%d #[fg=colour245]%H:%M #[fg=colour39]#(whoami)"
+
+      # --- Window title style ---
+      setw -g window-status-current-format " #[fg=colour39,bold]#I:#W#[default] "
+      setw -g window-status-format " #[fg=colour244]#I:#W#[default] "
 
       set -g status-position top
       set -g window-status-current-style fg=red,bg=black
