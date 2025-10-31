@@ -7,14 +7,15 @@
   # ollama-cuda
   #];
 
-  # services.ollama = {
-  #   enable = true;
-  #   acceleration = "cuda";
-  #   loadModels = [
-  #     "gemma3:12b"
-  #     "deepseek-r1:14b"
-  #   ];
-  # };
+  services.ollama = {
+    enable = true;
+    # acceleration = "cuda";
+    loadModels = [
+      "gemma3:12b"
+      "deepseek-r1:14b"
+      "qwen2.5:32b"
+    ];
+  };
   #
   # services.open-webui = {
   #   enable = true;

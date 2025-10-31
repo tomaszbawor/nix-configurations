@@ -8,7 +8,7 @@
     jetbrains.idea-ultimate
 
     # Programming tools
-    rustup
+    # rustup
 
     # Gleam
     erlang

@@ -35,6 +35,9 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
+    goose.url = "github:block/goose"; # tracks the default branch (main)
+    # goose.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -44,6 +47,7 @@
       home-manager,
       homebrew,
       nix-flatpak,
+      goose,
       ...
     }@inputs:
     {
@@ -55,7 +59,7 @@
         desktop = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
-            inherit inputs system;
+            inherit inputs system goose;
             username = "tomasz";
           };
 
