@@ -3,13 +3,10 @@
   ...
 }:
 {
-  #environment.systemPackages = with pkgs; [
-  # ollama-cuda
-  #];
 
   services.ollama = {
     enable = true;
-    # acceleration = "cuda";
+    acceleration = "cuda";
     loadModels = [
       "gemma3:12b"
       "deepseek-r1:14b"
