@@ -30,7 +30,7 @@
 
   # Enable automatic login for the user..
   services.displayManager.autoLogin = {
-    enable = true;
+    enable = false;
     user = "tomasz";
   };
 
@@ -43,10 +43,6 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
-
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "libsoup-2.74.3"
-  # ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
