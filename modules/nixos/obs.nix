@@ -21,6 +21,8 @@
       obs-pipewire-audio-capture
       obs-gstreamer
       obs-vkcapture
+      pixel-art
+      input-overlay
     ];
   };
 
