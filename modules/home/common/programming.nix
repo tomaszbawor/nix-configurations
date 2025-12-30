@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     vscode
 
-    # Ovverride JDK fixes intellij java sdk build failure
     jetbrains.idea-ultimate
 
     # Programming tools
