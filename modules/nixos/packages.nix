@@ -44,5 +44,6 @@
     bruno # Testing HTTP API
     google-chrome # Browser
     cameractrls # Camera Controll App
+    _1password-gui # 1Password gui
   ];
 }
