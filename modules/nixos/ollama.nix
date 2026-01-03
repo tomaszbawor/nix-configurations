@@ -13,7 +13,7 @@
       "qwen2.5:32b"
     ];
   };
-  #
+  # #
   # services.open-webui = {
   #   enable = true;
   #   port = 1234;

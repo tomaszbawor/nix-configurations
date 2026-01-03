@@ -25,6 +25,7 @@
     tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
     killall # For Killing All Instances Of Programs
+    brave # Browser
     libnotify # For Notifications
     lshw # Detailed Hardware Information
     nixfmt-rfc-style # Nix Formatter
@@ -41,7 +42,7 @@
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
     obsidian # Note taking application
-    bruno # Testing HTTP API
+    # bruno # Testing HTTP API
     google-chrome # Browser
     cameractrls # Camera Controll App
     _1password-gui # 1Password gui
