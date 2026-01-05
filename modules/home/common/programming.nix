@@ -5,6 +5,8 @@
     vscode
 
     jetbrains.idea-ultimate
+    jetbrains.clion
+
 
     # Programming tools
     # rustup
@@ -18,6 +20,9 @@
 
     ## Lua package manager
     lux-cli
+
+    # C programming 
+    clang-tools
   ];
 
   programs.java = {
