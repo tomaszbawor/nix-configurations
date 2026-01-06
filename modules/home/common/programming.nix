@@ -4,12 +4,10 @@
   home.packages = with pkgs; [
     vscode
 
-    jetbrains.idea-ultimate
-    jetbrains.clion
-
+    jetbrains.idea
 
     # Programming tools
-    # rustup
+    rustup
 
     # Gleam
     erlang
@@ -21,13 +19,13 @@
     ## Lua package manager
     lux-cli
 
-    # C programming 
+    # C programming
     clang-tools
   ];
 
   programs.java = {
     enable = true;
-    package = pkgs.temurin-bin-21;
+    package = pkgs.temurin-bin-25;
   };
 
   programs.go.enable = true;

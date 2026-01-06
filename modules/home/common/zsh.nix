@@ -9,7 +9,7 @@
 
     # FNM - Node Version Manger
     initContent = lib.mkOrder 1200 ''
-       eval "$(fnm env --use-on-cd --shell zsh)"
+      eval "$(fnm env --use-on-cd --shell zsh)"
     '';
 
     shellAliases = {

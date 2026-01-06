@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -10,7 +9,6 @@
     seahorse.enable = true;
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -34,7 +32,6 @@
     pciutils # Collection Of Tools For Inspecting PCI Devices
     picard # For Changing Music Metadata & Getting Cover Art
     playerctl # Allows Changing Media Volume Through Scripts
-    ripgrep # Improved Grep
     socat # Needed For Screenshots
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
@@ -42,7 +39,7 @@
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
     obsidian # Note taking application
-    # bruno # Testing HTTP API
+    bruno # Testing HTTP API
     google-chrome # Browser
     cameractrls # Camera Controll App
     _1password-gui # 1Password gui
