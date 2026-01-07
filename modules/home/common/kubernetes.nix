@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 let
-  kubectl = inputs.krew2nix.packages.${pkgs.system}.kubectl;
+  kubectl = inputs.krew2nix.packages.${pkgs.stdenv.hostPlatform.system}.kubectl;
 in
 {
   programs.k9s.enable = true;
