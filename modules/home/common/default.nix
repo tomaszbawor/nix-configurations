@@ -6,6 +6,7 @@
     ./btop.nix
     ./eza.nix
     ./gh.nix
+    ./ghostty.nix
     ./ideavim.nix
     ./kubernetes.nix
     ./nvim.nix
