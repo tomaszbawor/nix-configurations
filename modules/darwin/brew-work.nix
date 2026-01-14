@@ -12,7 +12,7 @@ in
       brews = [
         "ollama"
         "mermaid-cli"
-        "azure-cli"
+        # "azure-cli"
       ];
     };
   };

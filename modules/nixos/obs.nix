@@ -1,11 +1,10 @@
-
 {
   pkgs,
   username,
   ...
 }:
 {
- programs.obs-studio = {
+  programs.obs-studio = {
     enable = true;
 
     # optional Nvidia hardware acceleration

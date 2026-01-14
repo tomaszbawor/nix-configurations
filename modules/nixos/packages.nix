@@ -26,7 +26,6 @@
     brave # Browser
     libnotify # For Notifications
     lshw # Detailed Hardware Information
-    nixfmt-rfc-style # Nix Formatter
     nwg-displays # configure monitor configs via GUI
     onefetch # provides zsaneyos build info on current system
     pciutils # Collection Of Tools For Inspecting PCI Devices

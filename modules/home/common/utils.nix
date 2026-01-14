@@ -56,7 +56,7 @@
     nh
     nix-output-monitor
     nvd
-    nixfmt-rfc-style
+    nixfmt
 
     # Python
     uv

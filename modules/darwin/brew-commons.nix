@@ -22,6 +22,7 @@ in
         "rectangle-pro"
         "freecad"
         "todoist-app"
+        "ghostty"
       ];
       brews = [
         "libiconv"
