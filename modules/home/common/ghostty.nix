@@ -7,8 +7,8 @@
     package = if pkgs.stdenv.isLinux then pkgs.ghostty else null;
     enableZshIntegration = true;
     settings = {
-      font-family = "Iosevka Nerd Font";
-      font-size = 12;
+      font-family = "Geist Mono";
+      font-size = 18;
       background-opacity = 0.85;
       unfocused-split-opacity = 0.9;
     };
@@ -16,7 +16,7 @@
 
   # Ensure the Nerd Font is installed
   home.packages = with pkgs; [
-    nerd-fonts.iosevka
+    nerd-fonts.geist-mono
   ];
 
 }
