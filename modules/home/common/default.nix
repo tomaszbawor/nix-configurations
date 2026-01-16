@@ -4,6 +4,7 @@
   imports = [
     ./bat.nix
     ./btop.nix
+    ./ghostty.nix
     ./eza.nix
     ./gh.nix
     ./ideavim.nix

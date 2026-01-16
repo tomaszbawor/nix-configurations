@@ -3,6 +3,8 @@
 
   programs.ghostty = {
     enable = true;
+    # Only install the package on Linux; on macOS it's installed via Homebrew
+    package = if pkgs.stdenv.isLinux then pkgs.ghostty else null;
     enableZshIntegration = true;
     settings = {
       font-family = "Iosevka Nerd Font";
