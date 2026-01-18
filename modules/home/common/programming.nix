@@ -29,5 +29,7 @@
   };
 
   programs.go.enable = true;
-  programs.poetry.enable = true;
+  # TODO: Re-enable once nixpkgs fixes pbs-installer version constraint
+  # poetry 2.2.1 requires pbs-installer<2026.0.0 but nixpkgs has 2026.1.13
+  # programs.poetry.enable = true;
 }

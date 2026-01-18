@@ -8,7 +8,7 @@
     enableZshIntegration = true;
     settings = {
       font-family = "Geist Mono";
-      font-size = 18;
+      font-size = 16;
       background-opacity = 0.85;
       unfocused-split-opacity = 0.9;
     };
