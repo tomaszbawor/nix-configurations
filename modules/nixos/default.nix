@@ -6,6 +6,7 @@
     ./flatpak.nix
     ./fonts.nix
     ./freecad.nix
+    ./hacking.nix
     ./nh.nix
     ./nvidia-drivers.nix
     ./obs.nix
