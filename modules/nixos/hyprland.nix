@@ -9,11 +9,25 @@
   # XDG portal for Wayland
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    wlr.enable = false; # Use hyprland portal instead
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
     ];
+    config = {
+      common = {
+        default = [
+          "hyprland"
+          "gtk"
+        ];
+      };
+      hyprland = {
+        default = [
+          "hyprland"
+          "gtk"
+        ];
+      };
+    };
   };
 
   # Required services

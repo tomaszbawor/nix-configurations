@@ -206,6 +206,9 @@
       # AUTOSTART (omarchy: autostart.conf)
       # ========================================
       exec-once = [
+        # Portal/DBus environment (required for screen sharing)
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+
         # Authentication agent
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 
