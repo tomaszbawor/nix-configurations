@@ -199,15 +199,8 @@
       # ========================================
       # LAYER RULES
       # ========================================
-      layerrule = [
-        "blur, waybar"
-        "blur, swaync-control-center"
-        "blur, swaync-notification-window"
-        "ignorezero, swaync-control-center"
-        "ignorezero, swaync-notification-window"
-        "ignorealpha 0.5, swaync-control-center"
-        "ignorealpha 0.5, swaync-notification-window"
-      ];
+      # Note: Layer rules for blur are handled via decoration settings
+      # layerrule syntax for blur popups is version-specific
 
       # ========================================
       # AUTOSTART (omarchy: autostart.conf)
@@ -223,8 +216,8 @@
         # Wallpaper (using swww for animated wallpapers, or hyprpaper for static)
         "swww-daemon"
 
-        # Status bar
-        "waybar"
+        # Status bar - NOTE: waybar is started via systemd, not here
+        # "waybar"
 
         # Notifications
         "swaync"

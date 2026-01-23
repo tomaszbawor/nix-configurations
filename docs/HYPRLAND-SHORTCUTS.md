@@ -8,13 +8,13 @@ This configuration is based on **basecamp/omarchy** Linux setup, adapted for Nix
 
 ## Essential Shortcuts (Start Here!)
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + Return` | Open terminal (Ghostty) |
-| `SUPER + Space` | Open app launcher (Walker) |
-| `SUPER + Q` | Close active window |
-| `SUPER + L` | Lock screen |
-| `SUPER + SHIFT + M` | Exit Hyprland |
+| Shortcut            | Action                     |
+| ------------------- | -------------------------- |
+| `SUPER + Return`    | Open terminal (Ghostty)    |
+| `SUPER + Space`     | Open app launcher (Walker) |
+| `SUPER + Q`         | Close active window        |
+| `SUPER + L`         | Lock screen                |
+| `SUPER + SHIFT + M` | Exit Hyprland              |
 
 ---
 
@@ -22,59 +22,59 @@ This configuration is based on **basecamp/omarchy** Linux setup, adapted for Nix
 
 ### Focus Movement (Vim-style)
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + H` | Focus window left |
-| `SUPER + J` | Focus window down |
-| `SUPER + K` | Focus window up |
-| `SUPER + L` | Focus window right |
+| Shortcut             | Action                    |
+| -------------------- | ------------------------- |
+| `SUPER + H`          | Focus window left         |
+| `SUPER + J`          | Focus window down         |
+| `SUPER + K`          | Focus window up           |
+| `SUPER + L`          | Focus window right        |
 | `SUPER + Arrow Keys` | Focus window in direction |
 
 ### Move Windows
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + SHIFT + H` | Move window left |
-| `SUPER + SHIFT + J` | Move window down |
-| `SUPER + SHIFT + K` | Move window up |
-| `SUPER + SHIFT + L` | Move window right |
+| Shortcut                     | Action                   |
+| ---------------------------- | ------------------------ |
+| `SUPER + SHIFT + H`          | Move window left         |
+| `SUPER + SHIFT + J`          | Move window down         |
+| `SUPER + SHIFT + K`          | Move window up           |
+| `SUPER + SHIFT + L`          | Move window right        |
 | `SUPER + SHIFT + Arrow Keys` | Move window in direction |
 
 ### Swap Windows
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + CTRL + H` | Swap with window left |
-| `SUPER + CTRL + J` | Swap with window down |
-| `SUPER + CTRL + K` | Swap with window up |
+| Shortcut           | Action                 |
+| ------------------ | ---------------------- |
+| `SUPER + CTRL + H` | Swap with window left  |
+| `SUPER + CTRL + J` | Swap with window down  |
+| `SUPER + CTRL + K` | Swap with window up    |
 | `SUPER + CTRL + L` | Swap with window right |
 
 ### Resize Windows
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + ALT + H` | Shrink width |
-| `SUPER + ALT + L` | Grow width |
-| `SUPER + ALT + K` | Shrink height |
-| `SUPER + ALT + J` | Grow height |
+| Shortcut                   | Action              |
+| -------------------------- | ------------------- |
+| `SUPER + ALT + H`          | Shrink width        |
+| `SUPER + ALT + L`          | Grow width          |
+| `SUPER + ALT + K`          | Shrink height       |
+| `SUPER + ALT + J`          | Grow height         |
 | `SUPER + ALT + Arrow Keys` | Resize in direction |
 
 ### Window States
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + F` | Toggle fullscreen |
-| `SUPER + SHIFT + F` | Toggle fake fullscreen |
-| `SUPER + V` | Toggle floating |
-| `SUPER + P` | Toggle pseudo-tiling |
-| `SUPER + Y` | Pin window (stays on all workspaces) |
-| `SUPER + C` | Center floating window |
+| Shortcut            | Action                               |
+| ------------------- | ------------------------------------ |
+| `SUPER + F`         | Toggle fullscreen                    |
+| `SUPER + SHIFT + F` | Toggle fake fullscreen               |
+| `SUPER + V`         | Toggle floating                      |
+| `SUPER + P`         | Toggle pseudo-tiling                 |
+| `SUPER + Y`         | Pin window (stays on all workspaces) |
+| `SUPER + C`         | Center floating window               |
 
 ### Mouse Operations
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + Left Click + Drag` | Move window |
+| Shortcut                     | Action        |
+| ---------------------------- | ------------- |
+| `SUPER + Left Click + Drag`  | Move window   |
 | `SUPER + Right Click + Drag` | Resize window |
 
 ---
@@ -83,73 +83,73 @@ This configuration is based on **basecamp/omarchy** Linux setup, adapted for Nix
 
 ### Switch Workspaces
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + 1-9` | Switch to workspace 1-9 |
-| `SUPER + 0` | Switch to workspace 10 |
-| `SUPER + Tab` | Next workspace |
-| `SUPER + SHIFT + Tab` | Previous workspace |
-| `SUPER + ]` | Next workspace |
-| `SUPER + [` | Previous workspace |
+| Shortcut              | Action                  |
+| --------------------- | ----------------------- |
+| `SUPER + 1-9`         | Switch to workspace 1-9 |
+| `SUPER + 0`           | Switch to workspace 10  |
+| `SUPER + Tab`         | Next workspace          |
+| `SUPER + SHIFT + Tab` | Previous workspace      |
+| `SUPER + ]`           | Next workspace          |
+| `SUPER + [`           | Previous workspace      |
 
 ### Move Windows to Workspaces
 
-| Shortcut | Action |
-|----------|--------|
+| Shortcut              | Action                                |
+| --------------------- | ------------------------------------- |
 | `SUPER + SHIFT + 1-9` | Move window to workspace 1-9 (follow) |
-| `SUPER + SHIFT + 0` | Move window to workspace 10 (follow) |
-| `SUPER + CTRL + 1-9` | Move window to workspace 1-9 (silent) |
-| `SUPER + CTRL + 0` | Move window to workspace 10 (silent) |
+| `SUPER + SHIFT + 0`   | Move window to workspace 10 (follow)  |
+| `SUPER + CTRL + 1-9`  | Move window to workspace 1-9 (silent) |
+| `SUPER + CTRL + 0`    | Move window to workspace 10 (silent)  |
 
 ### Special Workspace (Scratchpad)
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + S` | Toggle special workspace |
+| Shortcut            | Action                           |
+| ------------------- | -------------------------------- |
+| `SUPER + S`         | Toggle special workspace         |
 | `SUPER + SHIFT + S` | Move window to special workspace |
 
 ---
 
 ## Window Cycling
 
-| Shortcut | Action |
-|----------|--------|
-| `ALT + Tab` | Cycle to next window |
+| Shortcut            | Action                   |
+| ------------------- | ------------------------ |
+| `ALT + Tab`         | Cycle to next window     |
 | `ALT + SHIFT + Tab` | Cycle to previous window |
 
 ---
 
 ## Window Groups
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + G` | Toggle group mode |
-| `SUPER + '` | Next window in group |
+| Shortcut            | Action                   |
+| ------------------- | ------------------------ |
+| `SUPER + G`         | Toggle group mode        |
+| `SUPER + '`         | Next window in group     |
 | `SUPER + SHIFT + '` | Previous window in group |
 
 ---
 
 ## Applications
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + Return` | Terminal (Ghostty) |
-| `SUPER + Space` | App launcher (Walker) |
-| `SUPER + D` | App launcher (alternative) |
-| `SUPER + E` | File manager (Nautilus) |
-| `SUPER + B` | Browser (Brave) |
-| `SUPER + X` | Logout menu (wlogout) |
+| Shortcut         | Action                     |
+| ---------------- | -------------------------- |
+| `SUPER + Return` | Terminal (Ghostty)         |
+| `SUPER + Space`  | App launcher (Walker)      |
+| `SUPER + D`      | App launcher (alternative) |
+| `SUPER + E`      | File manager (Nautilus)    |
+| `SUPER + B`      | Browser (Brave)            |
+| `SUPER + X`      | Logout menu (wlogout)      |
 
 ---
 
 ## Screenshots
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + SHIFT + S` | Screenshot region to clipboard |
-| `Print` | Screenshot fullscreen to clipboard |
-| `SUPER + Print` | Screenshot fullscreen and save to file |
-| `SUPER + SHIFT + Print` | Screenshot region and edit (Swappy) |
+| Shortcut                | Action                                 |
+| ----------------------- | -------------------------------------- |
+| `SUPER + SHIFT + S`     | Screenshot region to clipboard         |
+| `Print`                 | Screenshot fullscreen to clipboard     |
+| `SUPER + Print`         | Screenshot fullscreen and save to file |
+| `SUPER + SHIFT + Print` | Screenshot region and edit (Swappy)    |
 
 Screenshots are saved to `~/Pictures/Screenshots/`
 
@@ -157,16 +157,16 @@ Screenshots are saved to `~/Pictures/Screenshots/`
 
 ## Clipboard
 
-| Shortcut | Action |
-|----------|--------|
+| Shortcut            | Action                 |
+| ------------------- | ---------------------- |
 | `SUPER + SHIFT + V` | Open clipboard history |
 
 ---
 
 ## Notifications
 
-| Shortcut | Action |
-|----------|--------|
+| Shortcut    | Action                     |
+| ----------- | -------------------------- |
 | `SUPER + N` | Toggle notification center |
 
 ---
@@ -175,39 +175,39 @@ Screenshots are saved to `~/Pictures/Screenshots/`
 
 ### Volume
 
-| Key | Action |
-|-----|--------|
-| `XF86AudioRaiseVolume` | Increase volume 5% |
-| `XF86AudioLowerVolume` | Decrease volume 5% |
-| `XF86AudioMute` | Toggle mute |
-| `XF86AudioMicMute` | Toggle microphone mute |
+| Key                    | Action                 |
+| ---------------------- | ---------------------- |
+| `XF86AudioRaiseVolume` | Increase volume 5%     |
+| `XF86AudioLowerVolume` | Decrease volume 5%     |
+| `XF86AudioMute`        | Toggle mute            |
+| `XF86AudioMicMute`     | Toggle microphone mute |
 
 ### Brightness
 
-| Key | Action |
-|-----|--------|
-| `XF86MonBrightnessUp` | Increase brightness 5% |
+| Key                     | Action                 |
+| ----------------------- | ---------------------- |
+| `XF86MonBrightnessUp`   | Increase brightness 5% |
 | `XF86MonBrightnessDown` | Decrease brightness 5% |
 
 ### Media Playback
 
-| Key | Action |
-|-----|--------|
-| `XF86AudioPlay` | Play/Pause |
-| `XF86AudioPause` | Play/Pause |
-| `XF86AudioNext` | Next track |
-| `XF86AudioPrev` | Previous track |
-| `XF86AudioStop` | Stop playback |
+| Key              | Action         |
+| ---------------- | -------------- |
+| `XF86AudioPlay`  | Play/Pause     |
+| `XF86AudioPause` | Play/Pause     |
+| `XF86AudioNext`  | Next track     |
+| `XF86AudioPrev`  | Previous track |
+| `XF86AudioStop`  | Stop playback  |
 
 ---
 
 ## System
 
-| Shortcut | Action |
-|----------|--------|
-| `SUPER + L` | Lock screen (Hyprlock) |
-| `SUPER + X` | Logout menu (wlogout) |
-| `SUPER + SHIFT + M` | Exit Hyprland |
+| Shortcut            | Action                 |
+| ------------------- | ---------------------- |
+| `SUPER + L`         | Lock screen (Hyprlock) |
+| `SUPER + X`         | Logout menu (wlogout)  |
+| `SUPER + SHIFT + M` | Exit Hyprland          |
 
 ---
 
@@ -259,11 +259,11 @@ sudo nixos-rebuild switch --flake .#desktop
 
 ## Idle Behavior
 
-| Timeout | Action |
-|---------|--------|
-| 5 minutes | Screen dims to 30% |
-| 10 minutes | Screen locks |
-| 15 minutes | Display turns off |
+| Timeout    | Action             |
+| ---------- | ------------------ |
+| 5 minutes  | Screen dims to 30% |
+| 10 minutes | Screen locks       |
+| 15 minutes | Display turns off  |
 
 ---
 
@@ -286,21 +286,25 @@ sudo nixos-rebuild switch --flake .#desktop
 ## Troubleshooting
 
 ### Screen doesn't lock
+
 - Check if `hyprlock` is installed: `which hyprlock`
 - Verify PAM is configured in NixOS
 
 ### Waybar not showing
+
 - Check if it's running: `pgrep waybar`
 - Restart it: `killall waybar && waybar &`
 
 ### No notifications
+
 - Check if swaync is running: `pgrep swaync`
 - Toggle notification center: `SUPER + N`
 
 ### Volume keys not working
+
 - Ensure `pamixer` is installed
 - Check if PipeWire/PulseAudio is running
 
 ---
 
-*Based on [basecamp/omarchy](https://github.com/basecamp/omarchy) Linux configuration*
+_Based on [basecamp/omarchy](https://github.com/basecamp/omarchy) Linux configuration_
