@@ -13,7 +13,7 @@ This configuration is based on **basecamp/omarchy** Linux setup, adapted for Nix
 | `SUPER + Return`    | Open terminal (Ghostty)    |
 | `SUPER + Space`     | Open app launcher (Walker) |
 | `SUPER + Q`         | Close active window        |
-| `SUPER + L`         | Lock screen                |
+| `SUPER + CTRL + L`  | Lock screen                |
 | `SUPER + SHIFT + M` | Exit Hyprland              |
 
 ---
@@ -67,6 +67,7 @@ This configuration is based on **basecamp/omarchy** Linux setup, adapted for Nix
 | `SUPER + SHIFT + F` | Toggle fake fullscreen               |
 | `SUPER + V`         | Toggle floating                      |
 | `SUPER + P`         | Toggle pseudo-tiling                 |
+| `SUPER + T`         | Toggle split direction               |
 | `SUPER + Y`         | Pin window (stays on all workspaces) |
 | `SUPER + C`         | Center floating window               |
 
@@ -205,7 +206,7 @@ Screenshots are saved to `~/Pictures/Screenshots/`
 
 | Shortcut            | Action                 |
 | ------------------- | ---------------------- |
-| `SUPER + L`         | Lock screen (Hyprlock) |
+| `SUPER + CTRL + L`  | Lock screen (Hyprlock) |
 | `SUPER + X`         | Logout menu (wlogout)  |
 | `SUPER + SHIFT + M` | Exit Hyprland          |
 
@@ -220,7 +221,7 @@ Screenshots are saved to `~/Pictures/Screenshots/`
 | SUPER + Return     Terminal                       |
 | SUPER + Space      App Launcher                   |
 | SUPER + Q          Close Window                   |
-| SUPER + L          Lock Screen                    |
+| SUPER + CTRL + L   Lock Screen                    |
 +---------------------------------------------------+
 | SUPER + H/J/K/L    Focus (vim-style)              |
 | SUPER + SHIFT + H/J/K/L    Move Window            |

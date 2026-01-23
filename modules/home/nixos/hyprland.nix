@@ -264,8 +264,8 @@
         # Exit Hyprland
         "$mainMod SHIFT, M, exit,"
 
-        # Lock screen
-        "$mainMod, L, exec, hyprlock"
+        # Lock screen (SUPER + CTRL + L to avoid conflict with vim navigation)
+        "$mainMod CTRL, L, exec, hyprlock"
 
         # Logout menu
         "$mainMod, X, exec, wlogout"
@@ -276,8 +276,8 @@
         # Pseudo-tiling
         "$mainMod, P, pseudo,"
 
-        # Toggle split
-        "$mainMod, J, togglesplit,"
+        # Toggle split (SUPER + T)
+        "$mainMod, T, togglesplit,"
 
         # Fullscreen
         "$mainMod, F, fullscreen, 0"
