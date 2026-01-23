@@ -8,14 +8,15 @@
     };
   };
 
-  # Switch to a GUI greeter: SDDM on Wayland
-  services.greetd.enable = false;
-
-  services.displayManager.sddm = {
+  # Switch to greetd with Hyprland session via tuigreet
+  services.greetd = {
     enable = true;
-    wayland.enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd ${pkgs.hyprland}/bin/start-hyprland";
+        user = "greeter";
+      };
+    };
   };
 
-  # Optional: Plasma desktop remains disabled; Hyprland sessions are provided via Hyprland package
-  services.desktopManager.plasma6.enable = false;
 }
