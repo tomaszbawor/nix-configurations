@@ -7,9 +7,14 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
-    # FNM - Node Version Manger
+    # FNM - Node Version Manager and tmux autostart
     initContent = lib.mkOrder 1200 ''
       eval "$(fnm env --use-on-cd --shell zsh)"
+
+      # Auto-start tmux on interactive shells (if not already inside tmux)
+      if [ -z "$TMUX" ] && [ -n "$PS1" ] && command -v tmux >/dev/null 2>&1; then
+        tmux attach -t main || tmux new -s main
+      fi
     '';
 
     shellAliases = {
@@ -42,5 +47,6 @@
       gites = "git add .; git commit --amend --no-edit; git push -f";
       runbg = ''bash -c '"$@" > /dev/null 2>&1 & disown' --'';
     };
+
   };
 }
