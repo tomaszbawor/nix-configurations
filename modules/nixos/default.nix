@@ -7,6 +7,7 @@
     ./fonts.nix
     ./freecad.nix
     ./hacking.nix
+    ./hyprland.nix
     ./nh.nix
     ./nvidia-drivers.nix
     ./obs.nix
@@ -15,8 +16,6 @@
     ./services.nix
     ./steam.nix
     ./synology-drive.nix
-    ./system.nix
-    ./thunar.nix
     ./system.nix
     ./thunar.nix
     ./user.nix
