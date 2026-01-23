@@ -21,6 +21,18 @@
     gvfs.enable = true; # Trash, mounting, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
     gnome.gnome-keyring.enable = true; # Secrets management
+    blueman.enable = true; # Bluetooth manager
+  };
+
+  # Enable Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true; # For battery reporting
+      };
+    };
   };
 
   # Security - for screen locking

@@ -1,5 +1,11 @@
 { pkgs, config, ... }:
 {
+  # Ensure Nerd Font is available for waybar icons
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    blueman # Bluetooth manager GUI
+  ];
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -26,6 +32,7 @@
         modules-right = [
           "tray"
           "pulseaudio"
+          "bluetooth"
           "network"
           "cpu"
           "memory"
@@ -47,9 +54,9 @@
             "8" = "8";
             "9" = "9";
             "10" = "0";
-            urgent = "";
-            active = "";
-            default = "";
+            urgent = "󰗖";
+            active = "󰝥";
+            default = "󰝦";
           };
           on-click = "activate";
           sort-by-number = true;
@@ -65,8 +72,9 @@
 
         # Clock
         clock = {
-          format = "{:%H:%M}";
-          format-alt = "{:%A, %B %d, %Y (%R)}";
+          interval = 1;
+          format = "󰥔 {:%H:%M}";
+          format-alt = "󰃭 {:%A, %B %d, %Y (%R)}";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
           calendar = {
             mode = "month";
@@ -85,16 +93,22 @@
 
         # CPU
         cpu = {
-          format = " {usage}%";
-          tooltip = true;
           interval = 2;
+          format = "󰍛 {usage}%";
+          format-alt = "󰍛 {avg_frequency}GHz";
+          tooltip = true;
+          tooltip-format = "CPU: {usage}%";
+          on-click-right = "ghostty -e btop";
         };
 
         # Memory
         memory = {
-          format = " {}%";
+          interval = 10;
+          format = "󰾆 {percentage}%";
+          format-alt = "󰾆 {used:0.1f}G";
           tooltip = true;
-          interval = 2;
+          tooltip-format = "RAM: {used:0.1f}GB / {total:0.1f}GB";
+          on-click-right = "ghostty -e btop";
         };
 
         # Battery
@@ -105,57 +119,96 @@
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-plugged = " {capacity}%";
+          format-charging = "󰂄 {capacity}%";
+          format-plugged = "󱘖 {capacity}%";
+          format-full = "󰁹 Full";
           format-alt = "{icon} {time}";
           format-icons = [
-            ""
-            ""
-            ""
-            ""
-            ""
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
           ];
+          format-time = "{H}h {M}min";
+          tooltip = true;
+          tooltip-format = "{timeTo} | {power}W";
+        };
+
+        # Bluetooth
+        bluetooth = {
+          format = "󰂯";
+          format-disabled = "󰂲";
+          format-off = "󰂲";
+          format-connected = "󰂱 {num_connections}";
+          format-connected-battery = "󰂱 {device_battery_percentage}%";
+          tooltip-format = "{controller_alias}\t{controller_address}";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_battery_percentage}%";
+          on-click = "blueman-manager";
+          on-click-right = "bluetoothctl power toggle";
         };
 
         # Network
         network = {
-          format-wifi = " {signalStrength}%";
-          format-ethernet = " {ipaddr}";
-          format-linked = " {ifname}";
-          format-disconnected = "⚠ Disconnected";
+          format-wifi = "󰤨 {signalStrength}%";
+          format-ethernet = "󰌘 {ipaddr}";
+          format-linked = "󰈁 {ifname}";
+          format-disconnected = "󰌙 Disconnected";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
-          tooltip-format = "{ifname}: {ipaddr}/{cidr}\n{essid} ({signalStrength}%)";
+          tooltip-format = "{ifname}: {ipaddr}/{cidr}";
+          tooltip-format-wifi = "{essid} ({signalStrength}%)\n{ipaddr}";
+          tooltip-format-ethernet = "{ifname}\n{ipaddr}";
+          tooltip-format-disconnected = "Disconnected";
+          format-icons = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
+          on-click-right = "nm-connection-editor";
         };
 
         # Audio
         pulseaudio = {
           format = "{icon} {volume}%";
-          format-bluetooth = "{icon} {volume}%";
-          format-bluetooth-muted = " {icon}";
-          format-muted = "";
-          format-source = " {volume}%";
-          format-source-muted = "";
+          format-bluetooth = "󰂰 {volume}%";
+          format-bluetooth-muted = "󰂲 {icon}";
+          format-muted = "󰖁";
+          format-source = "󰍬 {volume}%";
+          format-source-muted = "󰍭";
           format-icons = {
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
+            headphone = "󰋋";
+            hands-free = "󰋎";
+            headset = "󰋎";
+            phone = "󰏲";
+            portable = "󰏲";
+            car = "󰄋";
             default = [
-              ""
-              ""
-              ""
+              "󰕿"
+              "󰖀"
+              "󰕾"
             ];
           };
           on-click = "pavucontrol";
           on-click-right = "pamixer -t";
+          on-scroll-up = "pamixer -i 5";
+          on-scroll-down = "pamixer -d 5";
+          tooltip-format = "{icon} {desc} | {volume}%";
         };
 
         # System tray
         tray = {
           icon-size = 18;
-          spacing = 10;
+          spacing = 8;
         };
 
         # Notifications
@@ -163,14 +216,14 @@
           tooltip = false;
           format = "{icon}";
           format-icons = {
-            notification = "";
-            none = "";
-            dnd-notification = "";
-            dnd-none = "";
-            inhibited-notification = "";
-            inhibited-none = "";
-            dnd-inhibited-notification = "";
-            dnd-inhibited-none = "";
+            notification = "󰂚";
+            none = "󰂜";
+            dnd-notification = "󰂛";
+            dnd-none = "󰪑";
+            inhibited-notification = "󰂛";
+            inhibited-none = "󰂜";
+            dnd-inhibited-notification = "󰂛";
+            dnd-inhibited-none = "󰪑";
           };
           return-type = "json";
           exec-if = "which swaync-client";
@@ -184,7 +237,7 @@
 
     style = ''
       * {
-        font-family: "Geist Mono", "JetBrainsMono Nerd Font", monospace;
+        font-family: "JetBrainsMono Nerd Font", "JetBrainsMono NF", monospace;
         font-size: 13px;
         min-height: 0;
       }
@@ -245,6 +298,7 @@
       #cpu,
       #memory,
       #network,
+      #bluetooth,
       #pulseaudio,
       #tray,
       #custom-notification {
@@ -267,6 +321,10 @@
       #battery.charging,
       #battery.plugged {
         color: #a6e3a1;
+      }
+
+      #battery.warning {
+        color: #f9e2af;
       }
 
       #battery.critical:not(.charging) {
@@ -296,6 +354,19 @@
 
       #network.disconnected {
         color: #f38ba8;
+      }
+
+      #bluetooth {
+        color: #89b4fa;
+      }
+
+      #bluetooth.disabled,
+      #bluetooth.off {
+        color: #6c7086;
+      }
+
+      #bluetooth.connected {
+        color: #a6e3a1;
       }
 
       #pulseaudio {

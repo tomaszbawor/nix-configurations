@@ -247,8 +247,18 @@ All Hyprland configuration is managed through NixOS/home-manager:
 - **System config**: `modules/nixos/hyprland.nix`
 - **Hyprland settings**: `modules/home/nixos/hyprland.nix`
 - **Waybar**: `modules/home/nixos/waybar.nix`
+- **Walker (launcher)**: `modules/home/nixos/walker.nix`
 - **Lock screen**: `modules/home/nixos/hyprlock.nix`
 - **Idle daemon**: `modules/home/nixos/hypridle.nix`
+
+## Waybar Modules
+
+| Module | Click Action | Right-Click Action |
+|--------|--------------|-------------------|
+| Bluetooth | Open Blueman Manager | Toggle Bluetooth |
+| Network | - | Open Network Editor |
+| Audio | Open Pavucontrol | Toggle Mute |
+| CPU/Memory | - | Open btop |
 
 To modify keybindings, edit `modules/home/nixos/hyprland.nix` and rebuild:
 
