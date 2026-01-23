@@ -7,7 +7,7 @@
 
     settings = {
       # ========================================
-      # MONITORS (omarchy: monitors.conf)
+      # MONITORS
       # ========================================
       monitor = [
         # Default: auto-detect and position automatically
@@ -18,7 +18,7 @@
       ];
 
       # ========================================
-      # ENVIRONMENT VARIABLES (omarchy: envs.conf)
+      # ENVIRONMENT VARIABLES
       # ========================================
       env = [
         "XCURSOR_SIZE,24"
@@ -38,7 +38,7 @@
       ];
 
       # ========================================
-      # INPUT (omarchy: input.conf)
+      # INPUT
       # ========================================
       input = {
         kb_layout = "pl";
@@ -58,7 +58,7 @@
       };
 
       # ========================================
-      # LOOK AND FEEL (omarchy: looknfeel.conf)
+      # LOOK AND FEEL
       # ========================================
       general = {
         gaps_in = 5;
@@ -101,7 +101,7 @@
       animations = {
         enabled = true;
 
-        # Omarchy-style bezier curves
+        # Custom bezier curves
         bezier = [
           "easeOutQuint, 0.23, 1, 0.32, 1"
           "easeInOutCubic, 0.65, 0.05, 0.36, 1"
@@ -153,7 +153,7 @@
       };
 
       # ========================================
-      # WINDOW RULES (omarchy: windows.conf)
+      # WINDOW RULES
       # ========================================
       windowrulev2 = [
         # Floating windows
@@ -203,7 +203,7 @@
       # layerrule syntax for blur popups is version-specific
 
       # ========================================
-      # AUTOSTART (omarchy: autostart.conf)
+      # AUTOSTART
       # ========================================
       exec-once = [
         # Portal/DBus environment (required for screen sharing)
@@ -236,7 +236,7 @@
       ];
 
       # ========================================
-      # KEYBINDINGS (omarchy-style)
+      # KEYBINDINGS
       # ========================================
       "$mainMod" = "SUPER";
       "$terminal" = "ghostty";
@@ -246,7 +246,7 @@
 
       bind = [
         # ----------------------------------------
-        # UTILITIES (omarchy: bindings/utilities.conf)
+        # UTILITIES
         # ----------------------------------------
         # Terminal
         "$mainMod, Return, exec, $terminal"
@@ -293,7 +293,7 @@
         "$mainMod, C, centerwindow,"
 
         # ----------------------------------------
-        # SCREENSHOTS (omarchy: bindings/utilities.conf)
+        # SCREENSHOTS
         # ----------------------------------------
         # Screenshot region to clipboard
         "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
@@ -308,7 +308,7 @@
         "$mainMod, Print, exec, grim ~/Pictures/Screenshots/$(date +'%Y%m%d_%H%M%S').png"
 
         # ----------------------------------------
-        # CLIPBOARD (omarchy: bindings/clipboard.conf)
+        # CLIPBOARD
         # ----------------------------------------
         "$mainMod SHIFT, V, exec, cliphist list | walker --dmenu | cliphist decode | wl-copy"
 
@@ -318,7 +318,7 @@
         "$mainMod, N, exec, swaync-client -t -sw"
 
         # ----------------------------------------
-        # TILING / WINDOW MANAGEMENT (omarchy: bindings/tiling-v2.conf)
+        # TILING / WINDOW MANAGEMENT
         # ----------------------------------------
         # Move focus (vim-style)
         "$mainMod, H, movefocus, l"
@@ -428,7 +428,7 @@
       ];
 
       # ----------------------------------------
-      # MEDIA KEYS (omarchy: bindings/media.conf)
+      # MEDIA KEYS
       # ----------------------------------------
       bindel = [
         # Volume

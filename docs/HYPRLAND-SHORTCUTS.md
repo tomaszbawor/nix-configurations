@@ -1,6 +1,6 @@
 # Hyprland Keyboard Shortcuts
 
-This configuration is based on **basecamp/omarchy** Linux setup, adapted for NixOS with home-manager.
+Custom Hyprland configuration for NixOS with home-manager.
 
 > **Main Modifier Key**: `SUPER` (Windows/Meta key)
 
@@ -318,4 +318,4 @@ sudo nixos-rebuild switch --flake .#desktop
 
 ---
 
-_Based on [basecamp/omarchy](https://github.com/basecamp/omarchy) Linux configuration_
+

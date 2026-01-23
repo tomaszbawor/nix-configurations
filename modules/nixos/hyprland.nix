@@ -52,7 +52,7 @@
   # Security - for screen locking
   security.pam.services.hyprlock = { };
 
-  # Packages required for Hyprland ecosystem (omarchy-style)
+  # Packages required for Hyprland ecosystem
   environment.systemPackages = with pkgs; [
     # Core Hyprland utilities
     hyprlock # Lock screen
@@ -63,7 +63,7 @@
     # Status bar
     waybar
 
-    # App launcher (walker - omarchy style)
+    # App launcher
     walker
 
     # Notifications
