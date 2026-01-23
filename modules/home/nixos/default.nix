@@ -6,5 +6,6 @@
     ./hyprlock.nix
     ./hypridle.nix
     ./walker.nix
+    ./gtk.nix
   ];
 }
