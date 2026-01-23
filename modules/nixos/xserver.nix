@@ -8,23 +8,14 @@
     };
   };
 
-  # Hyprland with greetd/tuigreet
-  services.greetd = {
+  # Switch to a GUI greeter: SDDM on Wayland
+  services.greetd.enable = false;
+
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions ${pkgs.hyprland}/share/wayland-sessions";
-        user = "greeter";
-      };
-    };
+    wayland.enable = true;
   };
 
-  # Cosmic (disabled - using Hyprland)
-  # services.desktopManager.cosmic.enable = true;
-  # services.displayManager.cosmic-greeter.enable = true;
-
-  # KDE
-  # services.desktopManager.plasma6.enable = true;
-  # services.displayManager.sddm.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
+  # Optional: Plasma desktop remains disabled; Hyprland sessions are provided via Hyprland package
+  services.desktopManager.plasma6.enable = false;
 }
