@@ -21,6 +21,7 @@
 
     # C programming
     clang-tools
+    cmake
   ];
 
   programs.java = {
