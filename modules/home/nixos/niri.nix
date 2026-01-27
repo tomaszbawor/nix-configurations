@@ -25,6 +25,7 @@
         XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
         XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+
         XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
         XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
         XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
@@ -33,7 +34,6 @@
         XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
         Mod+O repeat=false { toggle-overview; }
-
         Mod+Q repeat=false { close-window; }
 
         Mod+Left  { focus-column-left; }
