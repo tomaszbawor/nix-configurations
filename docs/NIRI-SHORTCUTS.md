@@ -12,7 +12,7 @@ Source reference:
 | Shortcut | Action |
 | --- | --- |
 | Mod + Shift + / | Show hotkey overlay |
-| Mod + T | Terminal (default: alacritty) |
+| Mod + T | Terminal (default: ghostty) |
 | Mod + D | App launcher (default: fuzzel) |
 | Super + Alt + L | Lock screen (default: swaylock) |
 | Mod + O | Toggle overview |
@@ -61,7 +61,6 @@ Source reference:
 | Mod + Ctrl + R | Reset window height |
 | Mod + F | Maximize column |
 | Mod + Shift + F | Fullscreen window |
-| Mod + M | Maximize window to edges |
 | Mod + V | Toggle window floating |
 | Mod + W | Toggle tabbed column display |
 | Mod + BracketLeft | Consume/expel window left |

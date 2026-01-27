@@ -6,6 +6,10 @@
 
   programs.xwayland.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    xwayland-satellite
+  ];
+
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -33,6 +37,7 @@
   };
 
   environment.sessionVariables = {
+    DISPLAY = ":0";
     NIXOS_OZONE_WL = "1";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "niri";
