@@ -7,7 +7,7 @@
     ./fonts.nix
     ./freecad.nix
     ./hacking.nix
-    ./hyprland.nix
+    ./niri.nix
     ./nh.nix
     ./nvidia-drivers.nix
     ./obs.nix

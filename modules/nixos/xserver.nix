@@ -1,4 +1,9 @@
-{ host, pkgs, ... }:
+{
+  host,
+  pkgs,
+  config,
+  ...
+}:
 {
   services.xserver = {
     enable = false;
@@ -8,12 +13,12 @@
     };
   };
 
-  # Switch to greetd with Hyprland session via tuigreet
+  # Switch to greetd with Niri session via tuigreet
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd ${pkgs.hyprland}/bin/start-hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd ${config.programs.niri.package}/bin/niri-session";
         user = "greeter";
       };
     };

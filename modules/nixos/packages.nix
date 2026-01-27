@@ -26,6 +26,7 @@
     brave # Browser
     libnotify # For Notifications
     lshw # Detailed Hardware Information
+    nixd # Nix language server
     nwg-displays # configure monitor configs via GUI
     onefetch # provides zsaneyos build info on current system
     pciutils # Collection Of Tools For Inspecting PCI Devices
