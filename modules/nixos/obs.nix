@@ -20,6 +20,9 @@
       obs-pipewire-audio-capture
       obs-gstreamer
       obs-vkcapture
+      obs-teleport
+      obs-shaderfilter
+      advanced-scene-switcher
       pixel-art
       input-overlay
     ];
