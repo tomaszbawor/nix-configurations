@@ -5,8 +5,8 @@
     enable = true;
 
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
+      name = "Nordic";
+      package = pkgs.nordic;
     };
 
     iconTheme = {
@@ -48,7 +48,7 @@
   home.packages = with pkgs; [
     papirus-icon-theme
     adwaita-icon-theme
-    gnome-themes-extra
+    nordic
     hicolor-icon-theme # Fallback icon theme
   ];
 
