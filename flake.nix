@@ -5,11 +5,6 @@
     # Common
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,7 +46,6 @@
   outputs =
     {
       nixpkgs,
-      niri,
       noctalia,
       darwin,
       home-manager,
@@ -77,7 +71,6 @@
             { home-manager.extraSpecialArgs = specialArgs; }
             ./hosts/desktop/home.nix
             ./hosts/desktop/configuration.nix
-            niri.nixosModules.niri
             ./modules/nixos
             ./modules/home
             nix-flatpak.nixosModules.nix-flatpak

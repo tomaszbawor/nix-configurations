@@ -13,12 +13,12 @@
     };
   };
 
-  # Switch to greetd with Niri session via tuigreet
+  # Switch to greetd with Hyprland session via tuigreet
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd ${config.programs.niri.package}/bin/niri-session";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd start-hyprland";
         user = "greeter";
       };
     };

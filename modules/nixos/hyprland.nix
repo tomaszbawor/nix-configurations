@@ -36,6 +36,8 @@
     tumbler.enable = true; # Thumbnail support for images
     gnome.gnome-keyring.enable = true; # Secrets management
     blueman.enable = true; # Bluetooth manager
+    power-profiles-daemon.enable = true;
+    upower.enable = true;
   };
 
   # Enable Bluetooth
@@ -106,6 +108,7 @@
 
   # Environment variables for Wayland
   environment.sessionVariables = {
+    DISPLAY = ":0";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     XDG_SESSION_TYPE = "wayland";
