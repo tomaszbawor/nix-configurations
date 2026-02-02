@@ -6,8 +6,8 @@
       pager = "less -FR";
     };
     extraPackages = with pkgs.bat-extras; [
-      batman
-      batpipe
+      # batman
+      # batpipe
       # batgrep
     ];
   };

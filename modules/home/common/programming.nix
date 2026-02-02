@@ -5,7 +5,7 @@
     vscode
 
     jetbrains.idea
-    jetbrains.clion
+    # jetbrains.clion
 
     # Programming tools
     rustup
