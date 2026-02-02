@@ -7,6 +7,7 @@
     isNormalUser = true;
     description = "Tomasz Bawor";
     extraGroups = [
+      "dialout"
       "networkmanager"
       "wheel"
       "wireshark"
