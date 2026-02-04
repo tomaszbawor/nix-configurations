@@ -10,6 +10,7 @@
       }:
       {
         my.nvim.configPath = "/Users/${username}/nix-configurations/others/nvim";
+        my.doom.configPath = "/Users/${username}/nix-configurations/others/doom";
 
         programs.git = {
 

@@ -4,6 +4,7 @@
   imports = [
     ./bat.nix
     ./btop.nix
+    ./doom-emacs.nix
     ./ghostty.nix
     ./eza.nix
     ./gh.nix
