@@ -43,6 +43,7 @@ in
 
       if [ -x "${doomDir}/bin/doom" ]; then
         export DOOMDIR="${doomConfigDir}"
+        export PATH="${pkgs.emacs}/bin:${pkgs.git}/bin:${pkgs.ripgrep}/bin:${pkgs.fd}/bin:$PATH"
         if [ ! -d "${doomDir}/.local" ]; then
           "${doomDir}/bin/doom" install --force --no-config --no-env
         fi
