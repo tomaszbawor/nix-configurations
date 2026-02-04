@@ -37,12 +37,57 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(setq select-enable-clipboard t)
+(setq tab-width 2)
+(setq evil-shift-width 2)
+(setq-default indent-tabs-mode nil)
+(setq-default truncate-lines t)
+(global-auto-revert-mode 1)
+
+(after! which-key
+  (setq which-key-idle-delay 0.5))
+
+(defun tomasz/evil-scroll-down-center ()
+  (interactive)
+  (evil-scroll-down nil)
+  (recenter))
+
+(defun tomasz/evil-scroll-up-center ()
+  (interactive)
+  (evil-scroll-up nil)
+  (recenter))
+
+(defun tomasz/query-replace-word-at-point ()
+  (interactive)
+  (let ((word (thing-at-point 'word t)))
+    (when word
+      (query-replace-regexp (concat "\\_<" (regexp-quote word) "\\_>") word))))
+
+(map! :n "C-h" #'windmove-left
+      :n "C-j" #'windmove-down
+      :n "C-k" #'windmove-up
+      :n "C-l" #'windmove-right
+      :n "C-;" #'windmove-right
+      :n "C-_" #'+vterm/toggle
+      :i "jj" #'evil-normal-state
+      :n "g h" #'+lookup/documentation)
+
+(map! :leader
+      :desc "Quit all" "q q" #'save-buffers-kill-terminal
+      :desc "Find files" "f f" #'find-file
+      :desc "Live grep" "f g" #'+default/search-project
+      :desc "Buffers" "f b" #'consult-buffer
+      :desc "Recent files" "f r" #'recentf-open-files
+      :desc "Help" "f h" #'doom/help
+      :desc "File explorer" "e" #'treemacs
+      :desc "Toggle terminal" "f t" #'+term/toggle
+      :desc "Toggle terminal" "t t" #'+term/toggle)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
