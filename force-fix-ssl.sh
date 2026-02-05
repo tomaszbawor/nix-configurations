@@ -9,7 +9,7 @@ sudo launchctl stop org.nixos.nix-daemon
 rm -rf ~/.cache/nix/
 
 # Download and install certificates from brew's ca-certificates
-if command -v brew &> /dev/null; then
+if command -v brew &>/dev/null; then
     echo "Using brew's certificates..."
     BREW_CERT=$(brew --prefix)/etc/ca-certificates/cert.pem
     if [ -f "$BREW_CERT" ]; then
