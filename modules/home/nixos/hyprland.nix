@@ -9,7 +9,7 @@
     $terminal = ghostty
     $lock = hyprlock
 
-    exec-once = noctalia-shell
+    exec-once = systemctl --user start noctalia-shell.service
     exec-once = hypridle
 
     input {
