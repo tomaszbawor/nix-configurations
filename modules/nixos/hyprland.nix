@@ -82,7 +82,6 @@
 
     # Screen recording
     wf-recorder
-    obs-studio
 
     # File manager
     nautilus

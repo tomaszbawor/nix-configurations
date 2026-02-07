@@ -16,6 +16,10 @@
       kb_layout = pl
     }
 
+    # Drag windows with Super + left mouse button.
+    bindm = $mod, mouse:272, movewindow
+    bindm = $mod, mouse:273, resizewindow
+
     bind = $mod SHIFT, slash, exec, sh -c "hyprctl binds | fuzzel --dmenu --prompt 'Hyprland Binds'"
 
     bind = $mod, T, exec, $terminal
@@ -95,6 +99,7 @@
     bind = $mod, 7, workspace, 7
     bind = $mod, 8, workspace, 8
     bind = $mod, 9, workspace, 9
+    bind = $mod, 0, workspace, 0
 
     bind = $mod CTRL, 1, movetoworkspacesilent, 1
     bind = $mod CTRL, 2, movetoworkspacesilent, 2
@@ -105,6 +110,7 @@
     bind = $mod CTRL, 7, movetoworkspacesilent, 7
     bind = $mod CTRL, 8, movetoworkspacesilent, 8
     bind = $mod CTRL, 9, movetoworkspacesilent, 9
+    bind = $mod CTRL, 0, movetoworkspacesilent, 0
 
     bind = $mod, R, togglesplit
     bind = $mod, F, fullscreen
