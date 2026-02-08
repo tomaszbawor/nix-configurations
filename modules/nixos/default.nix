@@ -11,6 +11,7 @@
     ./nh.nix
     ./nvidia-drivers.nix
     ./obs.nix
+    ./v4l2loopback.nix
     ./ollama.nix
     ./packages.nix
     ./services.nix
