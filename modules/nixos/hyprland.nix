@@ -107,7 +107,8 @@
 
   # Environment variables for Wayland
   environment.sessionVariables = {
-    DISPLAY = ":0";
+    # Do not force DISPLAY on Wayland; let the compositor/XWayland set it.
+    # Hardcoding can cause odd behavior with capture/portals on some setups.
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     XDG_SESSION_TYPE = "wayland";

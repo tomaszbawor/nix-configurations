@@ -1,9 +1,19 @@
-{ host, ... }:
+{
+  config,
+  username,
+  ...
+}:
 {
   nix = {
     settings = {
-      cores = 8;
-      max-jobs = 2;
+      # Build throughput: let Nix pick sane defaults for this machine instead
+      # of hard-capping concurrency (noticeably speeds up rebuilds/dev loops).
+      max-jobs = "auto";
+
+      # 0 means "use all available cores". Nix uses this for scheduling and for
+      # builds that can actually utilize multiple cores.
+      cores = 0;
+
       download-buffer-size = 250000000;
       auto-optimise-store = true;
       experimental-features = [
@@ -45,9 +55,24 @@
   console.keyMap = "pl2";
   system.stateVersion = "24.11"; # Do not change!
 
+  # Compressed RAM swap: prevents hard UI stalls during memory pressure
+  # (e.g. builds + containers + OBS), while still keeping the system responsive.
+  zramSwap = {
+    enable = true;
+    algorithm = "lz4"; # prioritize low CPU overhead over max compression
+    memoryPercent = 25;
+  };
+
   system.autoUpgrade = {
     enable = true;
-    channel = "https://nixos.org/channels/nixos-24.11";
+
+    # Flake-based auto-upgrades keep the system consistent with this repo and
+    # avoid mixing channels with a flake-pinned configuration.
+    flake = "/home/${username}/nix-configurations#${config.networking.hostName}";
+
+    # Avoid background writes to flake.lock / git state (do input updates via
+    # an explicit `nh os switch -u` / `nix flake update` workflow instead).
+    flags = [ "--no-write-lock-file" ];
   };
 
   programs = {
