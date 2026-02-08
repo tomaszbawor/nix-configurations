@@ -39,7 +39,9 @@
       gsa = "./graldew spotlessApply";
 
       # Ultilities
-      gites = "git add .; git commit --amend --no-edit; git push -f";
+      # Rewrite + push helper. `--force-with-lease` is much safer than `-f` since
+      # it refuses to overwrite the remote if it moved unexpectedly.
+      gites = "git add . && git commit --amend --no-edit && git push --force-with-lease";
       runbg = ''bash -c '"$@" > /dev/null 2>&1 & disown' --'';
     };
 

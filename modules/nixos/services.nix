@@ -24,6 +24,10 @@
       alsa.support32Bit = true;
       pulse.enable = true;
 
+      # Enable JACK compatibility (PipeWire acts as the JACK server). Useful for
+      # pro-audio tooling and lower-latency routing/monitoring setups.
+      jack.enable = true;
+
       # Be explicit about the PipeWire session manager to avoid regressions when
       # defaults change between releases (important for streaming workflows).
       wireplumber.enable = true;
