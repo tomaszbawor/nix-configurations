@@ -6,6 +6,11 @@
 
   # Services to start
   services = {
+    # Use dbus-broker instead of the classic dbus-daemon for better performance
+    # and reliability on modern desktop workloads. Revert to "dbus" if you hit
+    # compatibility issues with any legacy software.
+    dbus.implementation = "broker";
+
     libinput.enable = true; # Input Handling
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
